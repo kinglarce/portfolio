@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
-
 const path = require("path");
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
@@ -30,7 +28,13 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         resolve: {
             alias: {
                 "@components": path.resolve(__dirname, "src/components"),
-                "@pages": path.resolve(__dirname, "src/pages")
+                "@config": path.resolve(__dirname, "src/config"),
+                "@content": path.resolve(__dirname, "src/content"),
+                "@fonts": path.resolve(__dirname, "src/fonts"),
+                "@images": path.resolve(__dirname, "src/images"),
+                "@pages": path.resolve(__dirname, "src/pages"),
+                "@styles": path.resolve(__dirname, "src/styles"),
+                "@utils": path.resolve(__dirname, "src/utils")
             }
         }
     });
