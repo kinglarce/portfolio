@@ -1,34 +1,24 @@
 {
-    "extends": [
-        "airbnb",
-        "prettier",
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "plugins": ["prettier"],
-    "rules": {
-        "prettier/prettier": ["error"],
-        // Allow JSX for .js & .jsx
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        // Indent with 4 spaces
-        "indent": ["error", 4],
-        // Indent JSX with 4 spaces
-        "react/jsx-indent": ["error", 4],
-        // Indent props with 4 spaces
-        "react/jsx-indent-props": ["error", 4]
-    },
-    "settings": {
-        "import/resolver": {
-            "alias": [
-                ["@components", "./src/components"],
-                ["@config", "./src/config"],
-                ["@content", "./src/content"],
-                ["@fonts", "./src/fonts"],
-                ["@images", "./src/images"],
-                ["@pages", "./src/pages"],
-                ["@styles", "./src/styles"],
-                ["@utils", "./src/utils"]
-            ]
-        }
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["@components", "./src/components"],
+        ["@config", "./src/config"],
+        ["@content", "./src/content"],
+        ["@fonts", "./src/fonts"],
+        ["@images", "./src/images"],
+        ["@pages", "./src/pages"],
+        ["@styles", "./src/styles"],
+        ["@utils", "./src/utils"]
+      ]
     }
+  }
 }

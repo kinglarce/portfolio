@@ -1,27 +1,6 @@
-import Theme from "./Theme";
-import GlobalStyle from "./GlobalStyle";
-import Mixins from "./Mixins";
-import Media from "./Media";
-// components
-// import Header from "./Header";
-// import Main from "./Main";
-// import Section from "./Section";
-// import Footer from "./Footer";
-// import Heading from "./Heading";
-// import Button from "./Button";
-// import InlineLink from "./InlineLink";
+import Theme from './Theme';
+import GlobalStyle from './GlobalStyle';
+import Mixins from './Mixins';
+import Media from './Media';
 
-export {
-    Theme,
-    GlobalStyle,
-    Mixins,
-    Media
-    // components
-    // Header,
-    // Main,
-    // Section,
-    // Footer,
-    // Heading,
-    // Button,
-    // InlineLink
-};
+export { Theme, GlobalStyle, Mixins, Media };
