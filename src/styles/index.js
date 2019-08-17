@@ -1,6 +1,6 @@
-import Theme from './Theme';
-import GlobalStyle from './GlobalStyle';
-import Mixins from './Mixins';
-import Media from './Media';
+import Theme from './theme';
+import GlobalStyle from './globalStyle';
+import Mixins from './mixins';
+import Media from './media';
 
 export { Theme, GlobalStyle, Mixins, Media };

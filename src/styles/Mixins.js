@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
-import theme from './Theme';
-import Media from './Media';
+import Theme from './theme';
+import Media from './media';
 
 const { desktop, tablet, phablet } = Media;
-const { colors, fontSizes, fonts } = theme;
+const { colors, fontSizes, fonts } = Theme;
 
 const mixins = {
   flexCenter: css`
@@ -28,7 +28,7 @@ const mixins = {
     text-decoration-skip-ink: auto;
     color: inherit;
     position: relative;
-    transition: ${theme.transition};
+    transition: ${Theme.transition};
     cursor: pointer;
     &:hover,
     &:active,
@@ -43,7 +43,7 @@ const mixins = {
     text-decoration: none;
     text-decoration-skip-ink: auto;
     position: relative;
-    transition: ${theme.transition};
+    transition: ${Theme.transition};
     cursor: pointer;
     color: ${colors.green};
     &:hover,
@@ -63,7 +63,7 @@ const mixins = {
       position: relative;
       bottom: 0.37em;
       background-color: ${colors.green};
-      transition: ${theme.transition};
+      transition: ${Theme.transition};
       opacity: 0.5;
     }
   `,
@@ -72,14 +72,14 @@ const mixins = {
     color: ${colors.green};
     background-color: transparent;
     border: 1px solid ${colors.green};
-    border-radius: ${theme.borderRadius};
+    border-radius: ${Theme.borderRadius};
     padding: 0.75rem 1rem;
     font-size: ${fontSizes.smallish};
     font-family: ${fonts.SFMono};
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
-    transition: ${theme.transition};
+    transition: ${Theme.transition};
     &:hover,
     &:focus,
     &:active {
@@ -94,14 +94,14 @@ const mixins = {
     color: ${colors.green};
     background-color: transparent;
     border: 1px solid ${colors.green};
-    border-radius: ${theme.borderRadius};
+    border-radius: ${Theme.borderRadius};
     padding: 1.25rem 1.75rem;
     font-size: ${fontSizes.small};
     font-family: ${fonts.SFMono};
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
-    transition: ${theme.transition};
+    transition: ${Theme.transition};
     &:hover,
     &:focus,
     &:active {
@@ -121,7 +121,7 @@ const mixins = {
 
   boxShadow: css`
     box-shadow: 0 10px 30px -15px ${colors.shadowNavy};
-    transition: ${theme.transition};
+    transition: ${Theme.transition};
 
     &:hover,
     &:focus {

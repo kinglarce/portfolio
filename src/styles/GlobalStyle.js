@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import Theme from './Theme';
-import Media from './Media';
-import * as fontFamilies from './Fonts';
+import Theme from './theme';
+import Media from './media';
+import * as fontFamilies from './fonts';
 
 const { phablet } = Media;
 const { colors, fontSizes, fonts } = Theme;
