@@ -141,16 +141,14 @@ const DELTA = 5;
 
 const useWindowEvent = (event, callback) => {
   useEffect(() => {
-    console.log('call only once on mounting');
     if (event === 'scroll' || event === 'resize') {
       window.addEventListener(event, throttle(callback));
     }
     window.addEventListener(event, callback);
     return () => {
-      console.log('unmount');
       return window.removeEventListener(event, callback);
     };
-  }, [event, callback]);
+  }, [event]);
 };
 
 const useGlobalScroll = callback => {
@@ -209,7 +207,6 @@ const Nav = () => {
   }, []);
 
   useEffect(() => {
-    console.log('only mount point');
     setTimeout(() => setIsMounted(true), 100);
     return () => {
       setIsMounted(false);
@@ -219,7 +216,7 @@ const Nav = () => {
   useGlobalScroll(() => handleScroll());
   useGlobalResize(() => handleResize());
   useGlobalKeydown(e => handleKeydown(e));
-  console.log('this always trigger cause of render');
+
   return (
     <NavContainer scrollDirection={scrollDirection}>
       <Helmet>
