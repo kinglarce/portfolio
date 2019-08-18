@@ -8,7 +8,7 @@ import Social from '@components/Social';
 import Email from '@components/Email';
 import Footer from '@components/Footer';
 
-import { globalStyle, theme } from '@styles';
+import { GlobalStyle, theme } from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
 
@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
         <div id="root">
           <Head metadata={site.siteMetadata} />
 
-          <globalStyle />
+          <GlobalStyle />
 
           <SkipToContent href="#content">Skip to Content</SkipToContent>
 

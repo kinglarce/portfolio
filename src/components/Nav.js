@@ -139,6 +139,28 @@ const ResumeLink = styled.a`
 
 const DELTA = 5;
 
+const useWindowEvent = (event, callback) => {
+  useEffect(() => {
+    if (event === 'scroll' || event === 'resize') {
+      window.addEventListener(event, throttle(callback));
+    }
+    window.addEventListener(event, callback);
+    return () => window.removeEventListener(event, callback);
+  }, [event, callback]);
+};
+
+const useGlobalScroll = callback => {
+  return useWindowEvent('scroll', callback);
+};
+
+const useGlobalResize = callback => {
+  return useWindowEvent('resize', callback);
+};
+
+const useGlobalKeydown = callback => {
+  return useWindowEvent('keydown', callback);
+};
+
 const Nav = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -146,7 +168,6 @@ const Nav = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-
   const handleScroll = () => {
     const fromTop = window.scrollY;
     // Make sure they scroll more than DELTA
@@ -185,17 +206,13 @@ const Nav = () => {
 
   useEffect(() => {
     setTimeout(() => setIsMounted(true), 100);
-    window.addEventListener('scroll', () => throttle(handleScroll()));
-    window.addEventListener('resize', () => throttle(handleResize()));
-    window.addEventListener('keydown', e => handleKeydown(e));
-
     return () => {
       setIsMounted(false);
-      window.removeEventListener('scroll', () => handleScroll());
-      window.removeEventListener('resize', () => handleResize());
-      window.removeEventListener('keydown', e => handleKeydown(e));
     };
-  }, [isMounted]);
+  }, []);
+  useGlobalScroll(() => handleScroll());
+  useGlobalResize(() => handleResize());
+  useGlobalKeydown(e => handleKeydown(e));
 
   return (
     <NavContainer scrollDirection={scrollDirection}>
