@@ -1,3 +1,4 @@
+const path = require('path');
 const config = require('./src/config');
 
 module.exports = {
@@ -59,6 +60,23 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: config.googleAnalyticsID
+      }
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@config': path.resolve(__dirname, 'src/config'),
+          '@content': path.resolve(__dirname, 'src/content'),
+          '@fonts': path.resolve(__dirname, 'src/fonts'),
+          '@images': path.resolve(__dirname, 'src/images'),
+          '@pages': path.resolve(__dirname, 'src/pages'),
+          '@styles': path.resolve(__dirname, 'src/styles'),
+          '@utils': path.resolve(__dirname, 'src/utils'),
+          '@static': path.resolve(__dirname, 'static')
+        },
+        extensions: ['js']
       }
     }
   ]
