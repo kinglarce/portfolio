@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
-import theme from './theme';
-import mediaQuery from './mediaQuery';
+import theme from '@styles/theme';
+import mediaQuery from '@styles/mediaQuery';
 
 const { desktop, tablet, phablet } = mediaQuery;
 const { colors, fontSizes, fonts } = theme;

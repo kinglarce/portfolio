@@ -1,10 +1,10 @@
-import IconGithub from './github';
-import IconLinkedin from './linkedin';
-import IconInstagram from './instagram';
-import IconExternal from './external';
-import IconLocation from './location';
-import IconFacebook from './facebook';
-import FormattedIcon from './formattedIcon';
+import IconGithub from '@components/Icons/github';
+import IconLinkedin from '@components/Icons/linkedin';
+import IconInstagram from '@components/Icons/instagram';
+import IconExternal from '@components/Icons/external';
+import IconLocation from '@components/Icons/location';
+import IconFacebook from '@components/Icons/facebook';
+import FormattedIcon from '@components/Icons/formattedIcon';
 
 export {
   IconGithub,

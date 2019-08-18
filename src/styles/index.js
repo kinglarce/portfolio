@@ -1,16 +1,16 @@
-import theme from './theme';
-import globalStyle from './globalStyle';
-import mixins from './mixins';
-import mediaQuery from './mediaQuery';
+import theme from '@styles/theme';
+import globalStyle from '@styles/globalStyle';
+import mixins from '@styles/mixins';
+import mediaQuery from '@styles/mediaQuery';
 
 // Styled components
-import Header from './components/Header';
-import Main from './components/Main';
-import Section from './components/Section';
-import Footer from './components/Footer';
-import Heading from './components/Heading';
-import Button from './components/Button';
-import InlineLink from './components/InlineLink';
+import Header from '@styles/components/Header';
+import Main from '@styles/components/Main';
+import Section from '@styles/components/Section';
+import Footer from '@styles/components/Footer';
+import Heading from '@styles/components/Heading';
+import Button from '@styles/components/Button';
+import InlineLink from '@styles/components/InlineLink';
 
 export {
   theme,

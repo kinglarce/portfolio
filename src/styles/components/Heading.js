@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import theme from '../theme';
-import mediaQuery from '../mediaQuery';
+import theme from '@styles/theme';
+import mediaQuery from '@styles/mediaQuery';
 
 const { colors, fontSizes, fonts } = theme;
 

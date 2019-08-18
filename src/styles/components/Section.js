@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mediaQuery from '../mediaQuery';
+import mediaQuery from '@styles/mediaQuery';
 
 const Section = styled.section`
   margin: 0 auto;

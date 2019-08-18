@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mixins from '../mixins';
+import mixins from '@styles/mixins';
 
 const Main = styled.main`
   ${mixins.sidePadding};
