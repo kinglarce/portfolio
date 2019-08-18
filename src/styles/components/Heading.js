@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import Theme from '../theme';
-import Media from '../media';
+import theme from '../theme';
+import mediaQuery from '../mediaQuery';
 
-const { colors, fontSizes, fonts } = Theme;
+const { colors, fontSizes, fonts } = theme;
 
 const Heading = styled.h3`
   position: relative;
@@ -12,7 +12,7 @@ const Heading = styled.h3`
   width: 100%;
   white-space: nowrap;
   font-size: ${fontSizes.h3};
-  ${Media.tablet`font-size: 24px;`};
+  ${mediaQuery.tablet`font-size: 24px;`};
 
   &:before {
     counter-increment: section;
@@ -24,7 +24,7 @@ const Heading = styled.h3`
     font-size: ${fontSizes.xlarge};
     position: relative;
     bottom: 4px;
-    ${Media.tablet`font-size: ${fontSizes.large};`};
+    ${mediaQuery.tablet`font-size: ${fontSizes.large};`};
   }
 
   &:after {
@@ -36,9 +36,9 @@ const Heading = styled.h3`
     position: relative;
     top: -5px;
     margin-left: 20px;
-    ${Media.desktop`width: 200px`};
-    ${Media.tablet`width: 100%;`};
-    ${Media.thone`margin-left: 10px;`};
+    ${mediaQuery.desktop`width: 200px`};
+    ${mediaQuery.tablet`width: 100%;`};
+    ${mediaQuery.thone`margin-left: 10px;`};
   }
 `;
 

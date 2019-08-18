@@ -3,9 +3,9 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { FormattedIcon } from '@components/Icons';
 import { socialMedia } from '@config';
-import { Theme, Media } from '@styles';
+import { theme, mediaQuery } from '@styles';
 
-const { colors } = Theme;
+const { colors } = theme;
 
 const SocialContainer = styled.div`
   width: 40px;
@@ -13,8 +13,8 @@ const SocialContainer = styled.div`
   bottom: 0;
   left: 40px;
   color: ${colors.lightSlate};
-  ${Media.desktop`left: 25px;`};
-  ${Media.tablet`display: none;`};
+  ${mediaQuery.desktop`left: 25px;`};
+  ${mediaQuery.tablet`display: none;`};
 `;
 const SocialItemList = styled.ul`
   display: flex;

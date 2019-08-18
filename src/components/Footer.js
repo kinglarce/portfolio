@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { IconGithub, IconLinkedin, IconInstagram, IconFacebook } from '@components/Icons';
 import { socialMedia } from '@config';
 
-import { Theme, Mixins, Media } from '@styles';
+import { theme, mixins, mediaQuery } from '@styles';
 
-const { colors, fontSizes, fonts } = Theme;
+const { colors, fontSizes, fonts } = theme;
 
 const FooterContainer = styled.footer`
-  ${Mixins.flexCenter};
+  ${mixins.flexCenter};
   flex-direction: column;
   padding: 15px;
   background-color: ${colors.darkNavy};
@@ -23,10 +23,10 @@ const SocialContainer = styled.div`
   max-width: 270px;
   margin: 0 auto 10px;
   display: none;
-  ${Media.tablet`display: block;`};
+  ${mediaQuery.tablet`display: block;`};
 `;
 const SocialItemList = styled.ul`
-  ${Mixins.flexBetween};
+  ${mixins.flexBetween};
 `;
 const SocialLink = styled.a`
   padding: 10px;

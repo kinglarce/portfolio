@@ -8,9 +8,9 @@ import Social from '@components/Social';
 import Email from '@components/Email';
 import Footer from '@components/Footer';
 
-import { GlobalStyle, Theme } from '@styles';
+import { globalStyle, theme } from '@styles';
 
-const { colors, fontSizes, fonts } = Theme;
+const { colors, fontSizes, fonts } = theme;
 
 const SkipToContent = styled.a`
   position: absolute;
@@ -28,14 +28,14 @@ const SkipToContent = styled.a`
     outline: 0;
     color: ${colors.green};
     background-color: ${colors.lightNavy};
-    border-radius: ${Theme.borderRadius};
+    border-radius: ${theme.borderRadius};
     padding: 18px 23px;
     font-size: ${fontSizes.small};
     font-family: ${fonts.SFMono};
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
-    transition: ${Theme.transition};
+    transition: ${theme.transition};
     top: 0;
     left: 0;
     width: auto;
@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
         <div id="root">
           <Head metadata={site.siteMetadata} />
 
-          <GlobalStyle />
+          <globalStyle />
 
           <SkipToContent href="#content">Skip to Content</SkipToContent>
 

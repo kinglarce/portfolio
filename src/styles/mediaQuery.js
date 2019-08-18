@@ -11,17 +11,17 @@ const sizes = {
   tiny: 330
 };
 
-// iterate through the sizes and create a media template
-export const media = Object.keys(sizes).reduce((accumulator, label) => {
+// iterate through the sizes and create a mediaQuery template
+export const mediaQuery = Object.keys(sizes).reduce((accumulator, label) => {
   // use em in breakpoints to work properly cross-browser and support users
-  // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
+  // changing their browsers font-size: https://zellwk.com/blog/mediaQuery-query-units/
   const emSize = sizes[label] / 16;
   accumulator[label] = (...args) => css`
-    @media (max-width: ${emSize}em) {
+    @mediaQuery (max-width: ${emSize}em) {
       ${css(...args)};
     }
   `;
   return accumulator;
 }, {});
 
-export default media;
+export default mediaQuery;

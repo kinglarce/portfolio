@@ -1,7 +1,7 @@
-import Theme from './theme';
-import GlobalStyle from './globalStyle';
-import Mixins from './mixins';
-import Media from './media';
+import theme from './theme';
+import globalStyle from './globalStyle';
+import mixins from './mixins';
+import mediaQuery from './mediaQuery';
 
 // Styled components
 import Header from './components/Header';
@@ -13,10 +13,10 @@ import Button from './components/Button';
 import InlineLink from './components/InlineLink';
 
 export {
-  Theme,
-  GlobalStyle,
-  Mixins,
-  Media,
+  theme,
+  globalStyle,
+  mixins,
+  mediaQuery,
   Header,
   Main,
   Section,

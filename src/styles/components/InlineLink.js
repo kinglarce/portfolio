@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import Theme from '../theme';
+import theme from '../theme';
 
-const { colors } = Theme;
+const { colors } = theme;
 
 const InlineLink = styled.a`
   display: inline-block;
   text-decoration: none;
   text-decoration-skip-ink: auto;
   position: relative;
-  transition: ${Theme.transition};
+  transition: ${theme.transition};
   cursor: pointer;
   color: ${colors.green};
   &:hover,
@@ -28,7 +28,7 @@ const InlineLink = styled.a`
     position: relative;
     bottom: 0.37em;
     background-color: ${colors.green};
-    transition: ${Theme.transition};
+    transition: ${theme.transition};
   }
 `;
 

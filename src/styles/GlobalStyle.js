@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
-import Theme from './theme';
-import Media from './media';
+import theme from './theme';
+import mediaQuery from './mediaQuery';
 import * as fontFamilies from './fonts';
 
-const { phablet } = Media;
-const { colors, fontSizes, fonts } = Theme;
+const { phablet } = mediaQuery;
+const { colors, fontSizes, fonts } = theme;
 
-const GlobalStyle = createGlobalStyle`
+const globalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Calibre';
     src: url(${fontFamilies.CalibreLightWOFF2}) format('woff2'),
@@ -166,7 +166,7 @@ const GlobalStyle = createGlobalStyle`
       overflow: hidden;
       #root > .container > * {
         filter: blur(5px) brightness(0.7);
-        transition: ${Theme.transition};
+        transition: ${theme.transition};
         pointer-events: none;
         user-select: none;
       }
@@ -214,7 +214,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration-skip-ink: auto;
     color: inherit;
     position: relative;
-    transition: ${Theme.transition};
+    transition: ${theme.transition};
     cursor: pointer;
 
     &:hover,
@@ -269,37 +269,37 @@ const GlobalStyle = createGlobalStyle`
   .fadeup-enter {
     opacity: 0.01;
     transform: translateY(20px);
-    transition: opacity 300ms ${Theme.easing}, transform 300ms ${Theme.easing};
+    transition: opacity 300ms ${theme.easing}, transform 300ms ${theme.easing};
   }
 
   .fadeup-enter-active {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity 300ms ${Theme.easing}, transform 300ms ${Theme.easing};
+    transition: opacity 300ms ${theme.easing}, transform 300ms ${theme.easing};
   }
 
   .fadedown-enter {
     opacity: 0.01;
     transform: translateY(-20px);
-    transition: opacity 300ms ${Theme.easing}, transform 300ms ${Theme.easing};
+    transition: opacity 300ms ${theme.easing}, transform 300ms ${theme.easing};
   }
 
   .fadedown-enter-active {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity 300ms ${Theme.easing}, transform 300ms ${Theme.easing};
+    transition: opacity 300ms ${theme.easing}, transform 300ms ${theme.easing};
   }
 
   .fade-enter {
     opacity: 0.01;
-    transition: opacity 1000ms ${Theme.easing};
+    transition: opacity 1000ms ${theme.easing};
   }
 
   .fade-enter-active {
     opacity: 1;
-    transition: opacity 1000ms ${Theme.easing};
+    transition: opacity 1000ms ${theme.easing};
   }
 
 `;
 
-export default GlobalStyle;
+export default globalStyle;

@@ -6,33 +6,33 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Menu from '@components/Menu';
 import { throttle } from '@utils';
 import { navLinks, navHeight } from '@config';
-import { Theme, Mixins, Media } from '@styles';
+import { theme, mixins, mediaQuery } from '@styles';
 
-const { colors, fontSizes, fonts } = Theme;
+const { colors, fontSizes, fonts } = theme;
 
 const NavContainer = styled.header`
-  ${Mixins.flexBetween};
+  ${mixins.flexBetween};
   position: fixed;
   top: 0;
   padding: 0px 50px;
   background-color: ${colors.navy};
-  transition: ${Theme.transition};
+  transition: ${theme.transition};
   z-index: 11;
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
   width: 100%;
-  height: ${props => (props.scrollDirection === 'none' ? Theme.navHeight : Theme.navScrollHeight)};
+  height: ${props => (props.scrollDirection === 'none' ? theme.navHeight : theme.navScrollHeight)};
   box-shadow: ${props =>
     props.scrollDirection === 'up' ? `0 10px 30px -10px ${colors.shadowNavy}` : 'none'};
   transform: translateY(
-    ${props => (props.scrollDirection === 'down' ? `-${Theme.navScrollHeight}` : '0px')}
+    ${props => (props.scrollDirection === 'down' ? `-${theme.navScrollHeight}` : '0px')}
   );
-  ${Media.desktop`padding: 0 40px;`};
-  ${Media.tablet`padding: 0 25px;`};
+  ${mediaQuery.desktop`padding: 0 40px;`};
+  ${mediaQuery.tablet`padding: 0 25px;`};
 `;
 const Navbar = styled.nav`
-  ${Mixins.flexBetween};
+  ${mixins.flexBetween};
   position: relative;
   width: 100%;
   color: ${colors.lightestSlate};
@@ -41,7 +41,7 @@ const Navbar = styled.nav`
   z-index: 12;
 `;
 const Hamburger = styled.div`
-  ${Mixins.flexCenter};
+  ${mixins.flexCenter};
   overflow: visible;
   margin: 0 -12px 0 0;
   padding: 15px;
@@ -54,20 +54,20 @@ const Hamburger = styled.div`
   border: 0;
   background-color: transparent;
   display: none;
-  ${Media.tablet`display: flex;`};
+  ${mediaQuery.tablet`display: flex;`};
 `;
 const HamburgerBox = styled.div`
   position: relative;
   display: inline-block;
-  width: ${Theme.hamburgerWidth}px;
+  width: ${theme.hamburgerWidth}px;
   height: 24px;
 `;
 const HamburgerInner = styled.div`
   background-color: ${colors.green};
   position: absolute;
-  width: ${Theme.hamburgerWidth}px;
+  width: ${theme.hamburgerWidth}px;
   height: 2px;
-  border-radius: ${Theme.borderRadius};
+  border-radius: ${theme.borderRadius};
   top: 50%;
   left: 0;
   right: 0;
@@ -86,7 +86,7 @@ const HamburgerInner = styled.div`
     position: absolute;
     left: auto;
     right: 0;
-    width: ${Theme.hamburgerWidth}px;
+    width: ${theme.hamburgerWidth}px;
     height: 2px;
     transition-timing-function: ease;
     transition-duration: 0.15s;
@@ -97,23 +97,23 @@ const HamburgerInner = styled.div`
     width: ${props => (props.menuOpen ? `100%` : `120%`)};
     top: ${props => (props.menuOpen ? `0` : `-10px`)};
     opacity: ${props => (props.menuOpen ? 0 : 1)};
-    transition: ${props => (props.menuOpen ? Theme.hamBeforeActive : Theme.hamBefore)};
+    transition: ${props => (props.menuOpen ? theme.hamBeforeActive : theme.hamBefore)};
   }
   &:after {
     width: ${props => (props.menuOpen ? `100%` : `80%`)};
     bottom: ${props => (props.menuOpen ? `0` : `-10px`)};
     transform: rotate(${props => (props.menuOpen ? `-90deg` : `0`)});
-    transition: ${props => (props.menuOpen ? Theme.hamAfterActive : Theme.hamAfter)};
+    transition: ${props => (props.menuOpen ? theme.hamAfterActive : theme.hamAfter)};
   }
 `;
 const NavLinks = styled.div`
   display: flex;
   align-items: center;
-  ${Media.tablet`display: none;`};
+  ${mediaQuery.tablet`display: none;`};
 `;
 const NavList = styled.ol`
   div {
-    ${Mixins.flexBetween};
+    ${mixins.flexBetween};
   }
 `;
 const NavListItem = styled.li`
@@ -132,7 +132,7 @@ const NavLink = styled(AnchorLink)`
   padding: 12px 10px;
 `;
 const ResumeLink = styled.a`
-  ${Mixins.smallButton};
+  ${mixins.smallButton};
   margin-left: 10px;
   font-size: ${fontSizes.smallish};
 `;

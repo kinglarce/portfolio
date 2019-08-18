@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { navLinks } from '@config';
-import { Theme, Mixins, Media } from '@styles';
+import { theme, mixins, mediaQuery } from '@styles';
 
-const { colors, fontSizes, fonts } = Theme;
+const { colors, fontSizes, fonts } = theme;
 
 const MenuContainer = styled.div`
   position: fixed;
@@ -16,14 +16,14 @@ const MenuContainer = styled.div`
   height: 100vh;
   z-index: 10;
   outline: 0;
-  transition: ${Theme.transition};
+  transition: ${theme.transition};
   transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
   visibility: ${props => (props.menuOpen ? 'visible' : 'hidden')};
   display: none;
-  ${Media.tablet`display: block;`};
+  ${mediaQuery.tablet`display: block;`};
 `;
 const Sidebar = styled.div`
-  ${Mixins.flexCenter};
+  ${mixins.flexCenter};
   flex-direction: column;
   background-color: ${colors.lightNavy};
   padding: 50px;
@@ -34,12 +34,12 @@ const Sidebar = styled.div`
   margin-left: auto;
   font-family: ${fonts.SFMono};
   box-shadow: -10px 0px 30px -15px ${colors.shadowNavy};
-  ${Media.thone`padding: 25px;`};
-  ${Media.phablet`width: 75vw;`};
-  ${Media.tiny`padding: 10px;`};
+  ${mediaQuery.thone`padding: 25px;`};
+  ${mediaQuery.phablet`width: 75vw;`};
+  ${mediaQuery.tiny`padding: 10px;`};
 `;
 const NavLinks = styled.nav`
-  ${Mixins.flexBetween};
+  ${mixins.flexBetween};
   width: 100%;
   flex-direction: column;
   text-align: center;
@@ -52,11 +52,11 @@ const NavListItem = styled.li`
   position: relative;
   font-size: ${fontSizes.large};
   counter-increment: item 1;
-  ${Media.thone`
+  ${mediaQuery.thone`
     margin: 0 auto 10px;
     font-size: ${fontSizes.medium};
   `};
-  ${Media.tiny`font-size: ${fontSizes.smallish};`};
+  ${mediaQuery.tiny`font-size: ${fontSizes.smallish};`};
   &:before {
     display: block;
     content: '0' counter(item) '.';
@@ -66,12 +66,12 @@ const NavListItem = styled.li`
   }
 `;
 const NavLink = styled(AnchorLink)`
-  ${Mixins.link};
+  ${mixins.link};
   padding: 3px 20px 20px;
   width: 100%;
 `;
 const ResumeLink = styled.a`
-  ${Mixins.bigButton};
+  ${mixins.bigButton};
   padding: 18px 50px;
   margin: 10% auto 0;
   width: max-content;

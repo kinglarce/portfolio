@@ -2,10 +2,10 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Main, Mixins } from '@styles';
+import { Main, mixins } from '@styles';
 
 const MainContainer = styled(Main)`
-  ${Mixins.sidePadding};
+  ${mixins.sidePadding};
   counter-reset: section;
 `;
 
