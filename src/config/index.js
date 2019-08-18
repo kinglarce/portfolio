@@ -21,6 +21,10 @@ module.exports = {
     {
       name: 'Instagram',
       url: 'https://www.instagram.com/larzq/'
+    },
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/hanzodarkria'
     }
   ],
 
@@ -31,11 +35,7 @@ module.exports = {
     },
     {
       name: 'Experience',
-      url: '#jobs'
-    },
-    {
-      name: 'Work',
-      url: '#projects'
+      url: '#experience'
     },
     {
       name: 'Contact',

@@ -10,7 +10,7 @@ const MainContainer = styled(Main)`
 `;
 
 const IndexPage = ({ data }) => {
-  console.log('WHAT IS THE DATA : ', data);
+  console.log('DATA : ', data);
   return (
     <MainContainer>
       <div>Main</div>
