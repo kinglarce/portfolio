@@ -3,20 +3,20 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Main, mixins } from '@styles';
+import { Layout, Hero } from '@components';
 
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
   counter-reset: section;
 `;
 
-const IndexPage = ({ data }) => {
-  console.log('DATA : ', data);
-  return (
-    <MainContainer>
-      <div>Main</div>
+const IndexPage = ({ data }) => (
+  <Layout>
+    <MainContainer id="content">
+      <Hero data={data.hero.edges} />
     </MainContainer>
-  );
-};
+  </Layout>
+);
 
 IndexPage.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
