@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -141,11 +141,15 @@ const DELTA = 5;
 
 const useWindowEvent = (event, callback) => {
   useEffect(() => {
+    console.log('call only once on mounting');
     if (event === 'scroll' || event === 'resize') {
       window.addEventListener(event, throttle(callback));
     }
     window.addEventListener(event, callback);
-    return () => window.removeEventListener(event, callback);
+    return () => {
+      console.log('unmount');
+      return window.removeEventListener(event, callback);
+    };
   }, [event, callback]);
 };
 
@@ -167,8 +171,8 @@ const Nav = () => {
   const [scrollDirection, setScrollDirection] = useState('none');
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const handleScroll = () => {
+  const toggleMenu = useCallback(() => setMenuOpen(!menuOpen), []);
+  const handleScroll = useCallback(() => {
     const fromTop = window.scrollY;
     // Make sure they scroll more than DELTA
     if (!isMounted || Math.abs(lastScrollTop - fromTop) <= DELTA || menuOpen) {
@@ -186,15 +190,15 @@ const Nav = () => {
       }
     }
     setLastScrollTop(fromTop);
-  };
+  }, []);
 
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     if (window.innerWidth > 768 && menuOpen) {
       toggleMenu();
     }
-  };
+  }, []);
 
-  const handleKeydown = e => {
+  const handleKeydown = useCallback(e => {
     if (!menuOpen) {
       return;
     }
@@ -202,18 +206,20 @@ const Nav = () => {
     if (e.which === 27 || e.key === 'Escape') {
       toggleMenu();
     }
-  };
+  }, []);
 
   useEffect(() => {
+    console.log('only mount point');
     setTimeout(() => setIsMounted(true), 100);
     return () => {
       setIsMounted(false);
     };
   }, []);
+
   useGlobalScroll(() => handleScroll());
   useGlobalResize(() => handleResize());
   useGlobalKeydown(e => handleKeydown(e));
-
+  console.log('this always trigger cause of render');
   return (
     <NavContainer scrollDirection={scrollDirection}>
       <Helmet>
