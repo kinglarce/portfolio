@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Main, mixins } from '@styles';
-import { Layout, Hero } from '@components';
+import { Layout, Hero, About } from '@components';
 
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
@@ -14,6 +14,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <MainContainer id="content">
       <Hero data={data.hero.edges} />
+      <About data={data.about.edges} />
     </MainContainer>
   </Layout>
 );
@@ -35,6 +36,17 @@ export const pageQuery = graphql`
             name
             contactText
             subtitles
+          }
+          html
+        }
+      }
+    }
+    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            skills
           }
           html
         }

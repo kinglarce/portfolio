@@ -2,7 +2,7 @@ import theme from '@styles/theme';
 import mixins from '@styles/mixins';
 import mediaQuery from '@styles/mediaQuery';
 
-import GlobalStyle from '@styles/components/GlobalStyle';
+import GlobalStyle from '@styles/GlobalStyle';
 import Header from '@styles/components/Header';
 import Main from '@styles/components/Main';
 import Section from '@styles/components/Section';
