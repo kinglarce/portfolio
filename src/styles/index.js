@@ -3,7 +3,6 @@ import globalStyle from '@styles/globalStyle';
 import mixins from '@styles/mixins';
 import mediaQuery from '@styles/mediaQuery';
 
-// Styled components
 import Header from '@styles/components/Header';
 import Main from '@styles/components/Main';
 import Section from '@styles/components/Section';
