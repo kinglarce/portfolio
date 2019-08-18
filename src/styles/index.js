@@ -4,24 +4,24 @@ import mixins from '@styles/mixins';
 import mediaQuery from '@styles/mediaQuery';
 
 // Styled components
-import Header from '@styles/components/Header';
-import Main from '@styles/components/Main';
-import Section from '@styles/components/Section';
-import Footer from '@styles/components/Footer';
-import Heading from '@styles/components/Heading';
-import Button from '@styles/components/Button';
-import InlineLink from '@styles/components/InlineLink';
+import header from '@styles/components/header';
+import main from '@styles/components/main';
+import section from '@styles/components/section';
+import footer from '@styles/components/footer';
+import heading from '@styles/components/heading';
+import button from '@styles/components/button';
+import inlineLink from '@styles/components/inlineLink';
 
 export {
   theme,
   globalStyle,
   mixins,
   mediaQuery,
-  Header,
-  Main,
-  Section,
-  Footer,
-  Heading,
-  Button,
-  InlineLink
+  header,
+  main,
+  section,
+  footer,
+  heading,
+  button,
+  inlineLink
 };
