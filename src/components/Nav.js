@@ -23,8 +23,7 @@ const NavContainer = styled.header`
   user-select: auto !important;
   width: 100%;
   height: ${props => (props.scrollDirection === 'none' ? theme.navHeight : theme.navScrollHeight)};
-  box-shadow: ${props =>
-    props.scrollDirection === 'up' ? `0 10px 30px -10px ${colors.shadowNavy}` : 'none'};
+  box-shadow: none;
   transform: translateY(
     ${props => (props.scrollDirection === 'down' ? `-${theme.navScrollHeight}` : '0px')}
   );
@@ -32,7 +31,7 @@ const NavContainer = styled.header`
   ${media.tablet`padding: 0 25px;`};
 `;
 const Navbar = styled.nav`
-  ${mixins.flexBetween};
+  ${mixins.flexEnd};
   position: relative;
   width: 100%;
   color: ${colors.lightestSlate};

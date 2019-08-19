@@ -18,6 +18,12 @@ const mixins = {
     align-items: center;
   `,
 
+  flexEnd: css`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  `,
+
   outline: css`
     outline: 1px solid red;
   `,
