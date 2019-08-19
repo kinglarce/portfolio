@@ -82,7 +82,6 @@ const Menu = ({ menuOpen, toggleMenu }) => {
     const { target } = e;
     const isLink = target.hasAttribute('href');
     const isNotMenu = target.classList && target.classList[0].includes('MenuContainer');
-
     if (isLink || isNotMenu) {
       toggleMenu();
     }

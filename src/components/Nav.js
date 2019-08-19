@@ -143,8 +143,9 @@ const useWindowEvent = (event, callback) => {
   useEffect(() => {
     if (event === 'scroll' || event === 'resize') {
       window.addEventListener(event, throttle(callback));
+    } else {
+      window.addEventListener(event, callback);
     }
-    window.addEventListener(event, callback);
     return () => {
       return window.removeEventListener(event, callback);
     };
@@ -169,7 +170,7 @@ const Nav = () => {
   const [scrollDirection, setScrollDirection] = useState('none');
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
-  const toggleMenu = useCallback(() => setMenuOpen(!menuOpen), []);
+  const toggleMenu = useCallback(() => setMenuOpen(!menuOpen), [menuOpen]);
   const handleScroll = useCallback(() => {
     const fromTop = window.scrollY;
     // Make sure they scroll more than DELTA
@@ -200,7 +201,6 @@ const Nav = () => {
     if (!menuOpen) {
       return;
     }
-
     if (e.which === 27 || e.key === 'Escape') {
       toggleMenu();
     }
