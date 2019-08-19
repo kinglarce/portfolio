@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { navLinks } from '@config';
-import { theme, mixins, mediaQuery } from '@styles';
+import { theme, mixins, media } from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
 
@@ -20,7 +20,7 @@ const MenuContainer = styled.div`
   transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
   visibility: ${props => (props.menuOpen ? 'visible' : 'hidden')};
   display: none;
-  ${mediaQuery.tablet`display: block;`};
+  ${media.tablet`display: block;`};
 `;
 const Sidebar = styled.div`
   ${mixins.flexCenter};
@@ -34,9 +34,9 @@ const Sidebar = styled.div`
   margin-left: auto;
   font-family: ${fonts.SFMono};
   box-shadow: -10px 0px 30px -15px ${colors.shadowNavy};
-  ${mediaQuery.thone`padding: 25px;`};
-  ${mediaQuery.phablet`width: 75vw;`};
-  ${mediaQuery.tiny`padding: 10px;`};
+  ${media.thone`padding: 25px;`};
+  ${media.phablet`width: 75vw;`};
+  ${media.tiny`padding: 10px;`};
 `;
 const NavLinks = styled.nav`
   ${mixins.flexBetween};
@@ -52,11 +52,11 @@ const NavListItem = styled.li`
   position: relative;
   font-size: ${fontSizes.large};
   counter-increment: item 1;
-  ${mediaQuery.thone`
+  ${media.thone`
     margin: 0 auto 10px;
     font-size: ${fontSizes.medium};
   `};
-  ${mediaQuery.tiny`font-size: ${fontSizes.smallish};`};
+  ${media.tiny`font-size: ${fontSizes.smallish};`};
   &:before {
     display: block;
     content: '0' counter(item) '.';

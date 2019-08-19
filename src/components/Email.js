@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { email } from '@config';
-import { theme, mediaQuery } from '@styles';
+import { theme, media } from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
 
@@ -12,8 +12,8 @@ const EmailContainer = styled.div`
   bottom: 0;
   right: 40px;
   color: ${colors.lightSlate};
-  ${mediaQuery.desktop`right: 25px;`};
-  ${mediaQuery.tablet`display: none;`};
+  ${media.desktop`right: 25px;`};
+  ${media.tablet`display: none;`};
   div {
     width: 100%;
     margin: 0 auto;

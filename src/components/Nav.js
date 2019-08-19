@@ -6,7 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Menu from '@components/Menu';
 import { throttle } from '@utils';
 import { navLinks, navHeight } from '@config';
-import { theme, mixins, mediaQuery } from '@styles';
+import { theme, mixins, media } from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
 
@@ -28,8 +28,8 @@ const NavContainer = styled.header`
   transform: translateY(
     ${props => (props.scrollDirection === 'down' ? `-${theme.navScrollHeight}` : '0px')}
   );
-  ${mediaQuery.desktop`padding: 0 40px;`};
-  ${mediaQuery.tablet`padding: 0 25px;`};
+  ${media.desktop`padding: 0 40px;`};
+  ${media.tablet`padding: 0 25px;`};
 `;
 const Navbar = styled.nav`
   ${mixins.flexBetween};
@@ -54,7 +54,7 @@ const Hamburger = styled.div`
   border: 0;
   background-color: transparent;
   display: none;
-  ${mediaQuery.tablet`display: flex;`};
+  ${media.tablet`display: flex;`};
 `;
 const HamburgerBox = styled.div`
   position: relative;
@@ -109,7 +109,7 @@ const HamburgerInner = styled.div`
 const NavLinks = styled.div`
   display: flex;
   align-items: center;
-  ${mediaQuery.tablet`display: none;`};
+  ${media.tablet`display: none;`};
 `;
 const NavList = styled.ol`
   div {

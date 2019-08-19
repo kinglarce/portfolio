@@ -1,12 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import theme from '@styles/theme';
-import mediaQuery from '@styles/mediaQuery';
+import media from '@styles/media';
 import * as fontFamilies from '@styles/fonts';
 
-const { phablet } = mediaQuery;
 const { colors, fontSizes, fonts } = theme;
 
-const globalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Calibre';
     src: url(${fontFamilies.CalibreLightWOFF2}) format('woff2'),
@@ -157,7 +156,7 @@ const globalStyle = createGlobalStyle`
     line-height: 1.3;
     font-family: ${fonts.Calibre};
     font-size: ${fontSizes.xlarge};
-    ${phablet`font-size: ${fontSizes.large};`}
+    ${media.phablet`font-size: ${fontSizes.large};`}
 
     &.hidden {
       overflow: hidden;
@@ -302,4 +301,4 @@ const globalStyle = createGlobalStyle`
 
 `;
 
-export default globalStyle;
+export default GlobalStyle;

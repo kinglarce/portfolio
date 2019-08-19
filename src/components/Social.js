@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { FormattedIcon } from '@components/Icons';
 import { socialMedia } from '@config';
-import { theme, mediaQuery } from '@styles';
+import { theme, media } from '@styles';
 
 const { colors } = theme;
 
@@ -13,8 +13,8 @@ const SocialContainer = styled.div`
   bottom: 0;
   left: 40px;
   color: ${colors.lightSlate};
-  ${mediaQuery.desktop`left: 25px;`};
-  ${mediaQuery.tablet`display: none;`};
+  ${media.desktop`left: 25px;`};
+  ${media.tablet`display: none;`};
 `;
 const SocialItemList = styled.ul`
   display: flex;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
-import { theme, mixins, mediaQuery, Section, Heading } from '@styles';
+import { theme, mixins, media, Section, Heading } from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
 
@@ -13,12 +13,12 @@ const AboutContainer = styled(Section)`
 const FlexContainer = styled.div`
   ${mixins.flexBetween};
   align-items: flex-start;
-  ${mediaQuery.tablet`display: block;`};
+  ${media.tablet`display: block;`};
 `;
 const ContentContainer = styled.div`
   width: 60%;
   max-width: 480px;
-  ${mediaQuery.tablet`width: 100%;`};
+  ${media.tablet`width: 100%;`};
   a {
     ${mixins.inlineLink};
   }

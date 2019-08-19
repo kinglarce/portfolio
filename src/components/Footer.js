@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { IconGithub, IconLinkedin, IconInstagram, IconFacebook } from '@components/Icons';
 import { socialMedia } from '@config';
 
-import { theme, mixins, mediaQuery } from '@styles';
+import { theme, mixins, media } from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
 
@@ -23,7 +23,7 @@ const SocialContainer = styled.div`
   max-width: 270px;
   margin: 0 auto 10px;
   display: none;
-  ${mediaQuery.tablet`display: block;`};
+  ${media.tablet`display: block;`};
 `;
 const SocialItemList = styled.ul`
   ${mixins.flexBetween};

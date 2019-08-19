@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import theme from '@styles/theme';
-import mediaQuery from '@styles/mediaQuery';
+import media from '@styles/media';
 
 const { colors, fontSizes, fonts } = theme;
 
@@ -12,7 +12,7 @@ const Heading = styled.h3`
   width: 100%;
   white-space: nowrap;
   font-size: ${fontSizes.h3};
-  ${mediaQuery.tablet`font-size: 24px;`};
+  ${media.tablet`font-size: 24px;`};
 
   &:before {
     counter-increment: section;
@@ -24,7 +24,7 @@ const Heading = styled.h3`
     font-size: ${fontSizes.xlarge};
     position: relative;
     bottom: 4px;
-    ${mediaQuery.tablet`font-size: ${fontSizes.large};`};
+    ${media.tablet`font-size: ${fontSizes.large};`};
   }
 
   &:after {
@@ -36,9 +36,9 @@ const Heading = styled.h3`
     position: relative;
     top: -5px;
     margin-left: 20px;
-    ${mediaQuery.desktop`width: 200px`};
-    ${mediaQuery.tablet`width: 100%;`};
-    ${mediaQuery.thone`margin-left: 10px;`};
+    ${media.desktop`width: 200px`};
+    ${media.tablet`width: 100%;`};
+    ${media.thone`margin-left: 10px;`};
   }
 `;
 

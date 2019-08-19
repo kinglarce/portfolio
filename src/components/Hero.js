@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { email } from '@config';
-import { theme, mixins, mediaQuery, Section } from '@styles';
+import { theme, mixins, media, Section } from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
 
@@ -12,7 +12,7 @@ const HeroContainer = styled(Section)`
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  ${mediaQuery.tablet`padding-top: 150px;`};
+  ${media.tablet`padding-top: 150px;`};
   div {
     width: 100%;
   }
@@ -23,26 +23,26 @@ const Hi = styled.h1`
   font-size: ${fontSizes.medium};
   font-family: ${fonts.SFMono};
   font-weight: normal;
-  ${mediaQuery.desktop`font-size: ${fontSizes.small};`};
-  ${mediaQuery.tablet`font-size: ${fontSizes.smallish};`};
+  ${media.desktop`font-size: ${fontSizes.small};`};
+  ${media.tablet`font-size: ${fontSizes.smallish};`};
 `;
 const Name = styled.h2`
   font-size: 80px;
   line-height: 1.1;
   margin: 0;
-  ${mediaQuery.desktop`font-size: 70px;`};
-  ${mediaQuery.tablet`font-size: 60px;`};
-  ${mediaQuery.phablet`font-size: 50px;`};
-  ${mediaQuery.phone`font-size: 40px;`};
+  ${media.desktop`font-size: 70px;`};
+  ${media.tablet`font-size: 60px;`};
+  ${media.phablet`font-size: 50px;`};
+  ${media.phone`font-size: 40px;`};
 `;
 const Subtitle = styled.h3`
   font-size: 80px;
   line-height: 1.1;
   color: ${colors.slate};
-  ${mediaQuery.desktop`font-size: 70px;`};
-  ${mediaQuery.tablet`font-size: 60px;`};
-  ${mediaQuery.phablet`font-size: 50px;`};
-  ${mediaQuery.phone`font-size: 40px;`};
+  ${media.desktop`font-size: 70px;`};
+  ${media.tablet`font-size: 60px;`};
+  ${media.phablet`font-size: 50px;`};
+  ${media.phone`font-size: 40px;`};
 `;
 const Blurb = styled.div`
   margin-top: 25px;

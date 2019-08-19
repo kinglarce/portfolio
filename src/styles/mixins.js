@@ -1,8 +1,8 @@
 import { css } from 'styled-components';
 import theme from '@styles/theme';
-import mediaQuery from '@styles/mediaQuery';
+import media from '@styles/media';
 
-const { desktop, tablet, phablet } = mediaQuery;
+const { desktop, tablet, phablet } = media;
 const { colors, fontSizes, fonts } = theme;
 
 const mixins = {

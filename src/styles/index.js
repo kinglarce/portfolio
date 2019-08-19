@@ -1,6 +1,6 @@
 import theme from '@styles/theme';
 import mixins from '@styles/mixins';
-import mediaQuery from '@styles/mediaQuery';
+import media from '@styles/media';
 
 import GlobalStyle from '@styles/components/GlobalStyle';
 import Header from '@styles/components/Header';
@@ -14,7 +14,7 @@ import InlineLink from '@styles/components/InlineLink';
 export {
   theme,
   mixins,
-  mediaQuery,
+  media,
   GlobalStyle,
   Header,
   Main,
