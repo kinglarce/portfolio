@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -140,15 +140,23 @@ const ResumeLink = styled.a`
 const DELTA = 5;
 
 const useWindowEvent = (event, callback) => {
+  // A ref that stores handler
+  const listenerRef = useRef();
+  // Update ref.current value if handler changes.
+  // This allows our effect below to always get latest handler without us needing to pass it in
+  // effect deps array and potentially cause effect to re-run every render.
   useEffect(() => {
-    if (event === 'scroll' || event === 'resize') {
-      window.addEventListener(event, throttle(callback));
-    } else {
-      window.addEventListener(event, callback);
-    }
-    return () => {
-      return window.removeEventListener(event, callback);
-    };
+    listenerRef.current = callback;
+  }, [callback]);
+  useEffect(() => {
+    // Create event listener that calls handler function stored in ref
+    const eventListener = e => listenerRef.current(e);
+    const isScrollOrResize = event === 'scroll' || event === 'resize';
+    const listener = isScrollOrResize ? throttle(eventListener) : eventListener;
+    // Add event listener
+    window.addEventListener(event, listener);
+    // Remove event listener on cleanup
+    return () => window.removeEventListener(event, callback);
   }, [event]);
 };
 
@@ -189,22 +197,25 @@ const Nav = () => {
       }
     }
     setLastScrollTop(fromTop);
-  }, []);
+  }, [isMounted, menuOpen, scrollDirection, lastScrollTop]);
 
   const handleResize = useCallback(() => {
     if (window.innerWidth > 768 && menuOpen) {
       toggleMenu();
     }
-  }, []);
+  }, [menuOpen]);
 
-  const handleKeydown = useCallback(e => {
-    if (!menuOpen) {
-      return;
-    }
-    if (e.which === 27 || e.key === 'Escape') {
-      toggleMenu();
-    }
-  }, []);
+  const handleKeydown = useCallback(
+    e => {
+      if (!menuOpen) {
+        return;
+      }
+      if (e.which === 27 || e.key === 'Escape') {
+        toggleMenu();
+      }
+    },
+    [menuOpen]
+  );
 
   useEffect(() => {
     setTimeout(() => setIsMounted(true), 100);
