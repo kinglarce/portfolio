@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Menu from '@components/Menu';
-import { throttle } from '@utils';
+import { useWindowEvent } from '@utils';
 import { navLinks, navHeight } from '@config';
 import { theme, mixins, media } from '@styles';
 
@@ -137,27 +137,6 @@ const ResumeLink = styled.a`
 `;
 
 const DELTA = 5;
-
-const useWindowEvent = (event, callback) => {
-  // A ref that stores handler
-  const listenerRef = useRef();
-  // Update ref.current value if handler changes.
-  // This allows our effect below to always get latest handler without us needing to pass it in
-  // effect deps array and potentially cause effect to re-run every render.
-  useEffect(() => {
-    listenerRef.current = callback;
-  }, [callback]);
-  useEffect(() => {
-    // Create event listener that calls handler function stored in ref
-    const eventListener = e => listenerRef.current(e);
-    const isScrollOrResize = event === 'scroll' || event === 'resize';
-    const listener = isScrollOrResize ? throttle(eventListener) : eventListener;
-    // Add event listener
-    window.addEventListener(event, listener);
-    // Remove event listener on cleanup
-    return () => window.removeEventListener(event, callback);
-  }, [event]);
-};
 
 const useGlobalScroll = callback => {
   return useWindowEvent('scroll', callback);
