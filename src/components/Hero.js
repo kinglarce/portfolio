@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import Typist from 'react-typist';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -36,14 +37,35 @@ const Name = styled.h2`
   ${media.phone`font-size: 40px;`};
 `;
 const Subtitle = styled.h3`
-  font-size: 80px;
+  font-size: 50px;
   line-height: 1.1;
   color: ${colors.slate};
-  ${media.desktop`font-size: 70px;`};
-  ${media.tablet`font-size: 60px;`};
-  ${media.phablet`font-size: 50px;`};
-  ${media.phone`font-size: 40px;`};
+  ${media.desktop`font-size: 50px;`};
+  ${media.tablet`font-size: 40px;`};
+  ${media.phablet`font-size: 30px;`};
+  ${media.phone`font-size: 20px;`};
 `;
+
+const Cursor = styled.span`
+  font-size: 50px;
+  line-height: 1.1;
+  color: ${colors.slate};
+  ${media.desktop`font-size: 50px;`};
+  ${media.tablet`font-size: 40px;`};
+  ${media.phablet`font-size: 30px;`};
+  ${media.phone`font-size: 20px;`};
+  animation: 1s blink step-end infinite;
+  @keyframes "blink" {
+    from,
+    to {
+      color: transparent;
+    }
+    50% {
+      color: ${colors.slate};
+    }
+  }
+`;
+
 const Blurb = styled.div`
   margin-top: 25px;
   width: 50%;
@@ -57,15 +79,29 @@ const EmailLink = styled.a`
   margin-top: 50px;
 `;
 
+const DELAY = 300;
+
+const useStateWithCallback = (initialState, callback) => {
+  const [state, setState] = useState(initialState);
+  useEffect(() => callback(state), [state, callback]);
+  return [state, setState];
+};
+
 const Hero = ({ data }) => {
+  const { frontmatter, html } = data[0].node;
   const [isMounted, setIsMounted] = useState(false);
+  const [typing, setTyping] = useStateWithCallback(true, () => {
+    setTimeout(() => setTyping(true), DELAY);
+  });
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), 1000);
     return () => clearTimeout(timeout);
   }, []);
 
-  const { frontmatter, html } = data[0].node;
+  const onTypingDone = () => {
+    setTyping(false);
+  };
 
   const one = () => <Hi style={{ transitionDelay: '100ms' }}>{frontmatter.title}</Hi>;
   const two = () => (
@@ -74,8 +110,25 @@ const Hero = ({ data }) => {
 .
     </Name>
   );
-  const three = () => (
-    <Subtitle style={{ transitionDelay: '300ms' }}>{frontmatter.subtitle}</Subtitle>
+  const three = useCallback(
+    () => (
+      <Subtitle style={{ transitionDelay: '600ms' }}>
+        {typing ? (
+          <Typist avgTypingDelay={100} onTypingDone={onTypingDone} startDelay={800}>
+            {frontmatter.subtitles.map(text => (
+              <span key={text}>
+                <Typist.Delay ms={300} />
+                {text}
+                <Typist.Backspace count={text.length} delay={DELAY} />
+              </span>
+            ))}
+          </Typist>
+        ) : (
+          <Cursor>|</Cursor>
+        )}
+      </Subtitle>
+    ),
+    [typing]
   );
   const four = () => (
     <Blurb style={{ transitionDelay: '400ms' }} dangerouslySetInnerHTML={{ __html: html }} />
