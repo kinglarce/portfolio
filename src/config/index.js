@@ -32,15 +32,15 @@ module.exports = {
     {
       name: 'About',
       url: '#about'
-    },
-    {
-      name: 'Experience',
-      url: '#experience'
-    },
-    {
-      name: 'Contact',
-      url: '#contact'
     }
+    // {
+    //   name: 'Experience',
+    //   url: '#experience'
+    // },
+    // {
+    //   name: 'Contact',
+    //   url: '#contact'
+    // }
   ],
 
   googleVerification: '',

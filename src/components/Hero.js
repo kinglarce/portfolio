@@ -87,9 +87,13 @@ const useStateWithCallback = (initialState, callback) => {
   return [state, setState];
 };
 
+const COUNT = 3;
+
 const Hero = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   const [isMounted, setIsMounted] = useState(false);
+  const [counter, setCounter] = useState(COUNT);
+  const [subtitles, setSubtitles] = useState(frontmatter.subtitles.slice(0, counter));
   const [typing, setTyping] = useStateWithCallback(true, () => {
     setTimeout(() => setTyping(true), DELAY);
   });
@@ -100,6 +104,16 @@ const Hero = ({ data }) => {
   }, []);
 
   const onTypingDone = () => {
+    let range = [];
+    if (counter === 9) {
+      setCounter(COUNT);
+      range = [0, COUNT];
+    } else {
+      setCounter(counter + COUNT);
+      range = [counter, counter + COUNT];
+    }
+    const [start, end] = range;
+    setSubtitles(frontmatter.subtitles.slice(start, end));
     setTyping(false);
   };
 
@@ -115,7 +129,7 @@ const Hero = ({ data }) => {
       <Subtitle style={{ transitionDelay: '600ms' }}>
         {typing ? (
           <Typist avgTypingDelay={100} onTypingDone={onTypingDone} startDelay={800}>
-            {frontmatter.subtitles.map(text => (
+            {subtitles.map(text => (
               <span key={text}>
                 <Typist.Delay ms={300} />
                 {text}
