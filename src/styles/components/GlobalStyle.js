@@ -132,6 +132,15 @@ const GlobalStyle = createGlobalStyle`
     font-style: italic;
     font-display: auto;
   }
+  @keyframes "blink" {
+    from,
+    to {
+      color: transparent;
+    }
+    50% {
+      color: ${colors.slate};
+    }
+  }
 
   html {
     box-sizing: border-box;

@@ -10,7 +10,7 @@ subtitles:
   - 'ようこそ！'
   - 'Herzlich willkommen!'
   - '환영!'
-  - 'May gani naka abot ka!'
+  - 'ยินดีต้อนรับ!'
 contactText: 'Get In Touch'
 ---
 

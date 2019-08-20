@@ -55,15 +55,6 @@ const Cursor = styled.span`
   ${media.phablet`font-size: 30px;`};
   ${media.phone`font-size: 20px;`};
   animation: 1s blink step-end infinite;
-  @keyframes "blink" {
-    from,
-    to {
-      color: transparent;
-    }
-    50% {
-      color: ${colors.slate};
-    }
-  }
 `;
 
 const Blurb = styled.div`
@@ -79,7 +70,8 @@ const EmailLink = styled.a`
   margin-top: 50px;
 `;
 
-const DELAY = 300;
+const DELAY = 200;
+const COUNT = 3;
 
 const useStateWithCallback = (initialState, callback) => {
   const [state, setState] = useState(initialState);
@@ -87,15 +79,14 @@ const useStateWithCallback = (initialState, callback) => {
   return [state, setState];
 };
 
-const COUNT = 3;
-
 const Hero = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   const [isMounted, setIsMounted] = useState(false);
   const [counter, setCounter] = useState(COUNT);
   const [subtitles, setSubtitles] = useState(frontmatter.subtitles.slice(0, counter));
   const [typing, setTyping] = useStateWithCallback(true, () => {
-    setTimeout(() => setTyping(true), DELAY);
+    const endDelay = counter === 3 ? DELAY + 4000 : DELAY;
+    setTimeout(() => setTyping(true), endDelay);
   });
 
   useEffect(() => {
@@ -128,10 +119,10 @@ const Hero = ({ data }) => {
     () => (
       <Subtitle style={{ transitionDelay: '600ms' }}>
         {typing ? (
-          <Typist avgTypingDelay={100} onTypingDone={onTypingDone} startDelay={800}>
+          <Typist avgTypingDelay={100} onTypingDone={onTypingDone} startDelay={1500}>
             {subtitles.map(text => (
               <span key={text}>
-                <Typist.Delay ms={300} />
+                <Typist.Delay ms={DELAY} />
                 {text}
                 <Typist.Backspace count={text.length} delay={DELAY} />
               </span>
