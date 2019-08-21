@@ -1,7 +1,9 @@
 module.exports = {
   siteTitle: 'King Larce Cortes',
-  siteDescription: '',
-  siteKeywords: '',
+  siteDescription:
+    'King Larce Cortes is a software engineer currently based in Tokyo, Japan which has 6 years of experience as a full-stack developer designing, implementing, testing, proposing and learning.',
+  siteKeywords:
+    'Larce, King Larce, King Larce Cortes, kingcort01, hanzodarkria, software engineer, front-end engineer, web developer, software engineer japan, full-stack developer',
   siteUrl: 'http://www.kinglarce.com',
   siteLanguage: 'en_US',
 
@@ -44,11 +46,11 @@ module.exports = {
   ],
 
   googleVerification: '',
-  googleAnalyticsID: '',
+  googleAnalyticsID: 'UA-145899832-1',
 
   navHeight: 100,
-  themeColor: '#fff',
-  backgroundColor: '#282a38',
+  themeColor: '#757474',
+  backgroundColor: '#FFFFFF',
 
   srConfig: (delay = 200) => ({
     origin: 'bottom',

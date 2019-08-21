@@ -30,7 +30,7 @@ const Head = ({ metadata }) => (
     <meta itemProp="description" content={metadata.description} />
     {/* <meta itemProp="image" content={`${config.siteUrl}${ogImage}`} /> */}
 
-    <meta name="theme-color" content={config.navyColor} />
+    <meta name="theme-color" content={config.themeColor} />
   </Helmet>
 );
 
