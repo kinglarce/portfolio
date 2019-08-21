@@ -16,7 +16,7 @@ const NavContainer = styled.header`
   top: 0;
   right: 0;
   padding: 0px 50px;
-  background-color: ${colors.darkerGray};
+  background-color: ${colors.white};
   transition: ${theme.transition};
   z-index: 11;
   filter: none !important;
@@ -35,7 +35,7 @@ const Navbar = styled.nav`
   ${mixins.flexEnd};
   position: relative;
   width: 100%;
-  color: ${colors.lighterDarkBlue};
+  color: ${colors.darkerWhite};
   font-family: ${fonts.SFMono};
   counter-reset: item 0;
   z-index: 12;
@@ -63,7 +63,7 @@ const HamburgerBox = styled.div`
   height: 24px;
 `;
 const HamburgerInner = styled.div`
-  background-color: ${colors.blueGreen};
+  background-color: ${colors.dark};
   position: absolute;
   width: ${theme.hamburgerWidth}px;
   height: 2px;
@@ -82,7 +82,7 @@ const HamburgerInner = styled.div`
   &:after {
     content: '';
     display: block;
-    background-color: ${colors.blueGreen};
+    background-color: ${colors.dark};
     position: absolute;
     left: auto;
     right: 0;
@@ -124,7 +124,7 @@ const NavListItem = styled.li`
   &:before {
     content: '0' counter(item) '.';
     text-align: right;
-    color: ${colors.blueGreen};
+    color: ${colors.dark};
     font-size: ${fontSizes.xsmall};
   }
 `;

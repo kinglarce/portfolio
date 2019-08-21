@@ -20,7 +20,7 @@ const Heading = styled.h3`
     margin-right: 10px;
     font-family: ${fonts.SFMono};
     font-weight: normal;
-    color: ${colors.blueGreen};
+    color: ${colors.dark};
     font-size: ${fontSizes.xlarge};
     position: relative;
     bottom: 4px;
@@ -32,7 +32,7 @@ const Heading = styled.h3`
     display: block;
     height: 1px;
     width: 300px;
-    background-color: ${colors.lightBlueGreen};
+    background-color: ${colors.darkestWhite};
     position: relative;
     top: -5px;
     margin-left: 20px;

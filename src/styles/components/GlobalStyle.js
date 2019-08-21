@@ -138,7 +138,7 @@ const GlobalStyle = createGlobalStyle`
       color: transparent;
     }
     50% {
-      color: ${colors.darkBlue};
+      color: ${colors.dark};
     }
   }
 
@@ -160,8 +160,8 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: ${colors.darkerGray};
-    color: ${colors.darkBlue};
+    background-color: ${colors.white};
+    color: ${colors.dark};
     line-height: 1.3;
     font-family: ${fonts.Calibre};
     font-size: ${fontSizes.xlarge};
@@ -182,7 +182,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: ${colors.highlight};
+    background-color: ${colors.darkest};
+    color: ${colors.white};
   }
 
   h1,
@@ -191,7 +192,7 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5 {
     font-weight: 600;
-    color: ${colors.lightBlueGreen};
+    color: ${colors.darkestWhite};
     margin: 0 0 10px 0;
   }
 
@@ -227,7 +228,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: ${colors.blueGreen};
+      color: ${colors.dark};
       outline: 0;
     }
   }
@@ -239,7 +240,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:focus,
     &:active {
-      outline-color: ${colors.blueGreen};
+      outline-color: ${colors.dark};
     }
   }
 

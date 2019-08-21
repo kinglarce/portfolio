@@ -1,5 +1,6 @@
 const theme = {
   colors: {
+    // Old Theme
     lightGreen: '#E5FCC2', // Highlights
     lightBlueGreen: '#9DE0AD', // Headings (h1, h2, ...)
     blueGreen: '#45ADA8', // Colors for Bullets, "Hi" text, Counting "01.", Hovering Links and Button
@@ -11,24 +12,24 @@ const theme = {
     darkerGray: '#4d4545', // Nav & Body Background
     shadowDarkGray: 'rgb(89,79,79, 0.7)', // Box Shadows
 
-    black: '#000000',
+    // Current Theme
     // Highlights
-    darkest: '#757474',
+    darkest: '#000000',
     // Colors for Bullets, "Hi" text, Counting "01.", Hovering Links and Button
     // Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
-    dark: '#9B9B9B',
+    dark: '#757474',
     // Headings (h1, h2, ...)
-    darkestWhite: '#B6B6B6',
+    darkestWhite: '#9B9B9B',
     // Nav Link Color
     // Email & Social Media Color
     // Box Shadows
-    darkerWhite: '#D1D1D1',
+    darkerWhite: '#B6B6B6',
     // Mobile Nav Menu Background
     darkWhite: '#E7E7E7',
     // Nav & Body Background
     // Footer Background
     white: '#FFFFFF'
-    // shadowDarkGray: 'rgb(89,79,79, 0.7)', // Box Shadows
+    // darkerWhite: 'rgb(89,79,79, 0.7)', // Box Shadows
   },
 
   fonts: {

@@ -35,12 +35,12 @@ const Skill = styled.li`
   padding-left: 20px;
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smallish};
-  color: ${colors.darkBlue};
+  color: ${colors.dark};
   &:before {
     content: '▹';
     position: absolute;
     left: 0;
-    color: ${colors.blueGreen};
+    color: ${colors.dark};
     font-size: ${fontSizes.small};
     line-height: 12px;
   }

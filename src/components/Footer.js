@@ -11,14 +11,14 @@ const FooterContainer = styled.footer`
   ${mixins.flexCenter};
   flex-direction: column;
   padding: 15px;
-  background-color: ${colors.darkGray};
-  color: ${colors.darkBlue};
+  background-color: ${colors.white};
+  color: ${colors.dark};
   text-align: center;
   height: auto;
   min-height: 70px;
 `;
 const SocialContainer = styled.div`
-  color: ${colors.lightDarkBlue};
+  color: ${colors.darkerWhite};
   width: 100%;
   max-width: 270px;
   margin: 0 auto 10px;

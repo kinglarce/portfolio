@@ -10,11 +10,11 @@ const InlineLink = styled.a`
   position: relative;
   transition: ${theme.transition};
   cursor: pointer;
-  color: ${colors.blueGreen};
+  color: ${colors.dark};
   &:hover,
   &:focus,
   &:active {
-    color: ${colors.blueGreen};
+    color: ${colors.dark};
     outline: 0;
     &:after {
       width: 100%;
@@ -27,7 +27,7 @@ const InlineLink = styled.a`
     height: 1px;
     position: relative;
     bottom: 0.37em;
-    background-color: ${colors.blueGreen};
+    background-color: ${colors.dark};
     transition: ${theme.transition};
   }
 `;
