@@ -1,51 +1,34 @@
 const theme = {
   colors: {
-    lightGreen: '#E5FCC2', // transGreen - Highlights
-    lightBlueGreen: '#9DE0AD', // white, mediumGrey - Headings (h1, h2, ...)
-    blueGreen: '#45ADA8', // green, blue - Colors for Bullets, "Hi" text, Counting "01.", Hovering Links and Button
-    darkBlue: '#547980', // slate - Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
-    lightDarkBlue: '#76a0a8', // lightSlate - Email & Social Media Color
-    lighterDarkBlue: '#9DBEC4', // lightestSlate - Nav Link Color
-    gray: '#7d7272', // lightNavy - Mobile Nav Menu Background
-    darkGray: '#594F4F', // darkNavy, - Footer Background
-    darkerGray: '#4d4545', // navy - Nav & Body Background
-    // transLightBlueGreen : 'rgba(157,224,173, 0.7)', // transGreen
-    shadowDarkGray: 'rgb(89,79,79, 0.7)', // shadowNavy - Box Shadows
+    lightGreen: '#E5FCC2', // Highlights
+    lightBlueGreen: '#9DE0AD', // Headings (h1, h2, ...)
+    blueGreen: '#45ADA8', // Colors for Bullets, "Hi" text, Counting "01.", Hovering Links and Button
+    darkBlue: '#547980', // Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
+    lightDarkBlue: '#76a0a8', // Email & Social Media Color
+    lighterDarkBlue: '#9DBEC4', // Nav Link Color
+    gray: '#7d7272', // Mobile Nav Menu Background
+    darkGray: '#594F4F', // Footer Background
+    darkerGray: '#4d4545', // Nav & Body Background
+    shadowDarkGray: 'rgb(89,79,79, 0.7)', // Box Shadows
 
-    // dark: '#000007',
-    // darkestNavy: '#01050b',
-    darkNavy: '#020c1b', // footer background
-    navy: '#0a192f', // nav navigation back, global body background
-    lightNavy: '#172a45', // (is the mobile responsive)menu background
-    // darkGrey: '#333f58', // layout
-    mediumGrey: '#2d3952', // heading - about me title
-    // blueGrey: '#293d5a',
-    // grey: '#4c5772',
-    // lightGrey: '#606a86',
-    slate: '#8892b0', // text colors for about skills, footer(not really use), hero subtitle typings, typer cursor, global cursor blinking & body paragraph colors
-    lightSlate: '#a8b2d1', // email text and vertical line, footer social media color , social icons color and vertical line
-    lightestSlate: '#ccd6f6', // nav link color
-    // offWhite: '#dce7ff',
-    white: '#e6f1ff', //  global all of these h1, h2, h3, h4, h5
-    // pink: '#FF647F',
-    // yellow: '#FFC464',
-    // orange: '#FF9E64',
-    green: '#64ffda',
-    // about the triangle bullet
-    // hero the "hi my name"
-    // menu "01." text color for mobile res
-    // nav the "01" for normal desktop, the hamburget lines
-    // button\ the button text and border color
-    // global hovering on links
-    // heading, the "01. About Me" color, the "01." only
-    // inlinelink, the "a link" tag text color
-    // mixins, the link, and all the buttons color and border color
-    blue: '#71AFFF', // global button active (could be the same as above)
-    // darkBlue: '#1D7FFC',
-    highlight: 'rgba(41, 61, 90, 0.99)', // global when highting something
-    transGreen: 'rgba(100, 255, 218, 0.07)', // button, mixins on hover or active
-    // transNavy: 'rgba(10, 25, 47, 0.7)',
-    shadowNavy: 'rgba(2, 12, 27, 0.7)' // menu, mixins box shadows
+    black: '#000000',
+    // Highlights
+    darkest: '#757474',
+    // Colors for Bullets, "Hi" text, Counting "01.", Hovering Links and Button
+    // Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
+    dark: '#9B9B9B',
+    // Headings (h1, h2, ...)
+    darkestWhite: '#B6B6B6',
+    // Nav Link Color
+    // Email & Social Media Color
+    // Box Shadows
+    darkerWhite: '#D1D1D1',
+    // Mobile Nav Menu Background
+    darkWhite: '#E7E7E7',
+    // Nav & Body Background
+    // Footer Background
+    white: '#FFFFFF'
+    // shadowDarkGray: 'rgb(89,79,79, 0.7)', // Box Shadows
   },
 
   fonts: {
