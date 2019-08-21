@@ -25,7 +25,7 @@ const Typer = ({ data }) => {
   const [counter, setCounter] = useState(COUNT);
   const [subtitles, setSubtitles] = useState(data.slice(0, counter));
   const [typing, setTyping] = useStateWithCallback(true, () => {
-    const endDelay = counter === 3 ? DELAY + 4000 : DELAY + 500;
+    const endDelay = counter === 3 ? DELAY + 4000 : DELAY;
     setTimeout(() => setTyping(true), endDelay);
   });
 
