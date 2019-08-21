@@ -37,7 +37,7 @@ const Navbar = styled.nav`
   width: 100%;
   color: ${colors.darkerWhite};
   font-family: ${fonts.SFMono};
-  counter-reset: item 0;
+  // counter-reset: item 0;
   z-index: 12;
 `;
 const Hamburger = styled.div`
@@ -120,13 +120,13 @@ const NavListItem = styled.li`
   margin: 0 10px;
   position: relative;
   font-size: ${fontSizes.smallish};
-  counter-increment: item 1;
-  &:before {
-    content: '0' counter(item) '.';
-    text-align: right;
-    color: ${colors.dark};
-    font-size: ${fontSizes.xsmall};
-  }
+  // counter-increment: item 1;
+  // &:before {
+  //   content: '0' counter(item) '.';
+  //   text-align: right;
+  //   color: ${colors.dark};
+  //   font-size: ${fontSizes.xsmall};
+  // }
 `;
 const NavLink = styled(AnchorLink)`
   padding: 12px 10px;

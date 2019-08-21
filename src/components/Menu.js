@@ -51,19 +51,19 @@ const NavListItem = styled.li`
   margin: 0 auto 20px;
   position: relative;
   font-size: ${fontSizes.large};
-  counter-increment: item 1;
+  // counter-increment: item 1;
   ${media.thone`
     margin: 0 auto 10px;
     font-size: ${fontSizes.medium};
   `};
   ${media.tiny`font-size: ${fontSizes.smallish};`};
-  &:before {
-    display: block;
-    content: '0' counter(item) '.';
-    color: ${colors.dark};
-    font-size: ${fontSizes.small};
-    margin-bottom: 5px;
-  }
+  // &:before {
+  //   display: block;
+  //   content: '0' counter(item) '.';
+  //   color: ${colors.dark};
+  //   font-size: ${fontSizes.small};
+  //   margin-bottom: 5px;
+  // }
 `;
 const NavLink = styled(AnchorLink)`
   ${mixins.link};
