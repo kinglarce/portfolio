@@ -11,7 +11,7 @@ const FormattedIcon = ({ name }) => {
       return <IconGithub />;
     case 'Linkedin':
       return <IconLinkedin />;
-    case 'Codepen':
+    case 'Facebook':
       return <IconFacebook />;
     case 'Instagram':
       return <IconInstagram />;

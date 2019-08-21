@@ -14,6 +14,7 @@ const NavContainer = styled.header`
   ${mixins.flexBetween};
   position: fixed;
   top: 0;
+  right: 0;
   padding: 0px 50px;
   background-color: ${colors.navy};
   transition: ${theme.transition};
@@ -21,7 +22,7 @@ const NavContainer = styled.header`
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
-  width: 100%;
+  width: 80%;
   height: ${props => (props.scrollDirection === 'none' ? theme.navHeight : theme.navScrollHeight)};
   box-shadow: none;
   transform: translateY(

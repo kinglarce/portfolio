@@ -10,7 +10,7 @@ const { colors } = theme;
 const SocialContainer = styled.div`
   width: 40px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 40px;
   color: ${colors.lightSlate};
   ${media.desktop`left: 25px;`};
@@ -20,7 +20,7 @@ const SocialItemList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  &:after {
+  &:before {
     content: '';
     display: block;
     width: 1px;
