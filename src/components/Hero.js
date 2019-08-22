@@ -21,7 +21,7 @@ const HeroContainer = styled(Section)`
   }
 `;
 const Hi = styled.h1`
-  color: ${colors.dark};
+  color: ${colors.introText};
   margin: 0 0 20px 3px;
   font-size: ${fontSizes.medium};
   font-family: ${fonts.SFMono};
@@ -41,7 +41,7 @@ const Name = styled.h2`
 const Subtitle = styled.h3`
   font-size: 50px;
   line-height: 1.1;
-  color: ${colors.dark};
+  color: ${colors.subtitle};
   ${media.desktop`font-size: 50px;`};
   ${media.tablet`font-size: 40px;`};
   ${media.phablet`font-size: 30px;`};

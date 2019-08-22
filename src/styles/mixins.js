@@ -39,7 +39,7 @@ const mixins = {
     &:hover,
     &:active,
     &:focus {
-      color: ${colors.dark};
+      color: ${colors.hoverLinks};
       outline: 0;
     }
   `,
@@ -51,11 +51,11 @@ const mixins = {
     position: relative;
     transition: ${theme.transition};
     cursor: pointer;
-    color: ${colors.dark};
+    color: ${colors.link};
     &:hover,
     &:focus,
     &:active {
-      color: ${colors.dark};
+      color: ${colors.hoverLinks};
       outline: 0;
       &:after {
         width: 100%;
@@ -68,16 +68,16 @@ const mixins = {
       height: 1px;
       position: relative;
       bottom: 0.37em;
-      background-color: ${colors.dark};
+      background-color: ${colors.pseudoElem};
       transition: ${theme.transition};
       opacity: 0.5;
     }
   `,
 
   smallButton: css`
-    color: ${colors.dark};
+    color: ${colors.buttons};
     background-color: transparent;
-    border: 1px solid ${colors.dark};
+    border: 1px solid ${colors.buttons};
     border-radius: ${theme.borderRadius};
     padding: 0.75rem 1rem;
     font-size: ${fontSizes.smallish};
@@ -89,7 +89,8 @@ const mixins = {
     &:hover,
     &:focus,
     &:active {
-      background-color: ${colors.darkest};
+      background-color: ${colors.hoverButtons};
+      color: ${colors.hoverTextButtons};
     }
     &:after {
       display: none !important;
@@ -97,9 +98,9 @@ const mixins = {
   `,
 
   bigButton: css`
-    color: ${colors.dark};
+    color: ${colors.buttons};
     background-color: transparent;
-    border: 1px solid ${colors.dark};
+    border: 1px solid ${colors.buttons};
     border-radius: ${theme.borderRadius};
     padding: 1.25rem 1.75rem;
     font-size: ${fontSizes.small};
@@ -111,7 +112,8 @@ const mixins = {
     &:hover,
     &:focus,
     &:active {
-      background-color: ${colors.darkest};
+      background-color: ${colors.hoverButtons};
+      color: ${colors.hoverTextButtons};
     }
     &:after {
       display: none !important;
@@ -126,12 +128,12 @@ const mixins = {
   `,
 
   boxShadow: css`
-    box-shadow: 0 10px 30px -15px ${colors.darkerWhite};
+    box-shadow: 0 10px 30px -15px ${colors.boxShadow};
     transition: ${theme.transition};
 
     &:hover,
     &:focus {
-      box-shadow: 0 20px 30px -15px ${colors.darkerWhite};
+      box-shadow: 0 20px 30px -15px ${colors.hoverBoxShadow};
     }
   `
 };

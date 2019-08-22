@@ -4,9 +4,9 @@ import theme from '@styles/theme';
 const { colors, fontSizes, fonts } = theme;
 
 const Button = styled.button`
-  color: ${colors.dark};
+  color: ${colors.buttons};
   background-color: transparent;
-  border: 1px solid ${colors.dark};
+  border: 1px solid ${colors.buttons};
   border-radius: ${theme.borderRadius};
   font-size: ${fontSizes.smallish};
   font-family: ${fonts.SFMono};
@@ -19,7 +19,7 @@ const Button = styled.button`
   &:hover,
   &:focus,
   &:active {
-    background-color: ${colors.darkest};
+    background-color: ${colors.hoverButtons};
     outline: none;
   }
   &:after {

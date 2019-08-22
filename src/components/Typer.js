@@ -10,7 +10,7 @@ const { colors } = theme;
 const Cursor = styled.span`
   font-size: 50px;
   line-height: 1.1;
-  color: ${colors.dark};
+  color: ${colors.cursor};
   ${media.desktop`font-size: 50px;`};
   ${media.tablet`font-size: 40px;`};
   ${media.phablet`font-size: 30px;`};

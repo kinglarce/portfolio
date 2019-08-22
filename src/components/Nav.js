@@ -16,26 +16,37 @@ const NavContainer = styled.header`
   top: 0;
   right: 0;
   padding: 0px 50px;
-  background-color: ${colors.white};
+  background-color: ${colors.navBackground};
   transition: ${theme.transition};
   z-index: 11;
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
-  width: 80%;
   height: ${props => (props.scrollDirection === 'none' ? theme.navHeight : theme.navScrollHeight)};
   box-shadow: none;
   transform: translateY(
     ${props => (props.scrollDirection === 'down' ? `-${theme.navScrollHeight}` : '0px')}
   );
-  ${media.desktop`padding: 0 40px;`};
-  ${media.tablet`padding: 0 25px;`};
+  ${media.giant`width: 80%;`};
+  ${media.bigDesktop`width: 80%;`};
+  ${media.desktop`
+    padding: 0 40px;
+    width: 80%;
+  `};
+  ${media.tablet`
+    width: 100%;
+    padding: 0 25px;
+  `};
+  ${media.thone`width: 100%;`};
+  ${media.phablet`width: 100%;`};
+  ${media.phone`width: 100%;`};
+  ${media.tiny`width: 100%;`};
 `;
 const Navbar = styled.nav`
   ${mixins.flexEnd};
   position: relative;
   width: 100%;
-  color: ${colors.darkerWhite};
+  color: ${colors.navLinks};
   font-family: ${fonts.SFMono};
   // counter-reset: item 0;
   z-index: 12;
@@ -63,7 +74,7 @@ const HamburgerBox = styled.div`
   height: 24px;
 `;
 const HamburgerInner = styled.div`
-  background-color: ${colors.dark};
+  background-color: ${colors.mobileNavHamburger};
   position: absolute;
   width: ${theme.hamburgerWidth}px;
   height: 2px;
@@ -82,7 +93,7 @@ const HamburgerInner = styled.div`
   &:after {
     content: '';
     display: block;
-    background-color: ${colors.dark};
+    background-color: ${colors.mobileNavHamburger};
     position: absolute;
     left: auto;
     right: 0;
@@ -124,7 +135,7 @@ const NavListItem = styled.li`
   // &:before {
   //   content: '0' counter(item) '.';
   //   text-align: right;
-  //   color: ${colors.dark};
+  //   color: ${colors.pseudoElem};
   //   font-size: ${fontSizes.xsmall};
   // }
 `;

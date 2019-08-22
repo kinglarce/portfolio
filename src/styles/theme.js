@@ -1,35 +1,62 @@
+const color = {
+  // Current Theme
+  // Highlights
+  darkest: '#000000',
+  // Colors for Bullets, "Hi" text or intro, Counting "01.", Hovering Links and Button
+  // Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
+  dark: '#757474',
+  // Headings (h1, h2, ...)
+  darkestWhite: '#9B9B9B',
+  // Nav Link Color
+  // Email & Social Media Color
+  // Box Shadows
+  darkerWhite: '#B6B6B6',
+  // Mobile Nav Menu Background
+  darkWhite: '#E7E7E7',
+  // Nav & Body Background
+  // Footer Background
+  white: '#FFFFFF',
+  // darkerWhite: 'rgb(89,79,79, 0.7)', // Box Shadows
+  // Old Theme
+  lightGreen: '#E5FCC2', // Highlights
+  lightBlueGreen: '#9DE0AD', // Headings (h1, h2, ...)
+  blueGreen: '#45ADA8', // Colors for Bullets, "Hi" text, Counting "01.", Hovering Links and Button
+  darkBlue: '#547980', // Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
+  lightDarkBlue: '#76a0a8', // Email & Social Media Color
+  lighterDarkBlue: '#9DBEC4', // Nav Link Color
+  gray: '#7d7272', // Mobile Nav Menu Background
+  darkGray: '#594F4F', // Footer Background
+  darkerGray: '#4d4545', // Nav & Body Background
+  shadowDarkGray: 'rgb(89,79,79, 0.7)' // Box Shadows
+};
+
 const theme = {
   colors: {
-    // Old Theme
-    lightGreen: '#E5FCC2', // Highlights
-    lightBlueGreen: '#9DE0AD', // Headings (h1, h2, ...)
-    blueGreen: '#45ADA8', // Colors for Bullets, "Hi" text, Counting "01.", Hovering Links and Button
-    darkBlue: '#547980', // Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
-    lightDarkBlue: '#76a0a8', // Email & Social Media Color
-    lighterDarkBlue: '#9DBEC4', // Nav Link Color
-    gray: '#7d7272', // Mobile Nav Menu Background
-    darkGray: '#594F4F', // Footer Background
-    darkerGray: '#4d4545', // Nav & Body Background
-    shadowDarkGray: 'rgb(89,79,79, 0.7)', // Box Shadows
-
-    // Current Theme
-    // Highlights
-    darkest: '#000000',
-    // Colors for Bullets, "Hi" text, Counting "01.", Hovering Links and Button
-    // Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
-    dark: '#757474',
-    // Headings (h1, h2, ...)
-    darkestWhite: '#9B9B9B',
-    // Nav Link Color
-    // Email & Social Media Color
-    // Box Shadows
-    darkerWhite: '#B6B6B6',
-    // Mobile Nav Menu Background
-    darkWhite: '#E7E7E7',
-    // Nav & Body Background
-    // Footer Background
-    white: '#FFFFFF'
-    // darkerWhite: 'rgb(89,79,79, 0.7)', // Box Shadows
+    highlights: color.darkest,
+    highlightText: color.white,
+    bullets: color.dark,
+    introText: color.dark,
+    pseudoElem: color.dark,
+    links: color.darkestWhite,
+    hoverLinks: color.darkest,
+    buttons: color.dark,
+    hoverButtons: color.darkest,
+    hoverTextButtons: color.darkWhite,
+    bodyText: color.dark,
+    footerText: color.dark,
+    subtitle: color.dark,
+    cursor: color.dark,
+    headings: color.darkestWhite,
+    navLinks: color.dark,
+    socialMedia: color.dark,
+    email: color.darkerWhite,
+    boxShadow: color.darkerWhite,
+    hoverBoxShadow: color.dark,
+    mobileNavHamburger: color.dark,
+    mobileNavBackground: color.darkWhite,
+    navBackground: color.white,
+    bodyBackground: color.white,
+    footerBackground: color.white
   },
 
   fonts: {
