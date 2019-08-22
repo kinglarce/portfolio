@@ -95,8 +95,6 @@ const HamburgerInner = styled.div`
     display: block;
     background-color: ${colors.mobileNavHamburger};
     position: absolute;
-    left: auto;
-    right: 0;
     width: ${theme.hamburgerWidth}px;
     height: 2px;
     transition-timing-function: ease;
@@ -105,13 +103,17 @@ const HamburgerInner = styled.div`
     border-radius: 4px;
   }
   &:before {
-    width: ${props => (props.menuOpen ? `100%` : `120%`)};
+    left: 0;
+    right: auto;
+    width: ${props => (props.menuOpen ? `100%` : `60%`)};
     top: ${props => (props.menuOpen ? `0` : `-10px`)};
     opacity: ${props => (props.menuOpen ? 0 : 1)};
     transition: ${props => (props.menuOpen ? theme.hamBeforeActive : theme.hamBefore)};
   }
   &:after {
-    width: ${props => (props.menuOpen ? `100%` : `80%`)};
+    left: auto;
+    right: 0;
+    width: ${props => (props.menuOpen ? `100%` : `60%`)};
     bottom: ${props => (props.menuOpen ? `0` : `-10px`)};
     transform: rotate(${props => (props.menuOpen ? `-90deg` : `0`)});
     transition: ${props => (props.menuOpen ? theme.hamAfterActive : theme.hamAfter)};
