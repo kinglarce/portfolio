@@ -221,7 +221,7 @@ const GlobalStyle = createGlobalStyle`
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
-    color: inherit;
+    color: ${colors.links};
     position: relative;
     transition: ${theme.transition};
     cursor: pointer;
