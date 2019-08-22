@@ -23,8 +23,8 @@ const MenuContainer = styled.div`
   ${media.tablet`display: block;`};
 `;
 const Sidebar = styled.div`
-  ${mixins.flexCenter};
-  flex-direction: column;
+  ${mixins.flexCenterStart};
+  flex-direction: initial;
   background-color: ${colors.mobileNavBackground};
   padding: 50px;
   width: 50vw;
@@ -37,6 +37,28 @@ const Sidebar = styled.div`
   ${media.thone`padding: 25px;`};
   ${media.phablet`width: 75vw;`};
   ${media.tiny`padding: 10px;`};
+`;
+const SidebarBackground = styled.div`
+  ${mixins.flexCenter};
+  flex-direction: initial;
+  background-color: ${colors.mobileNavBackground};
+  padding: 50px;
+  width: 50vw;
+  height: 20%;
+  position: relative;
+  right: 0;
+  margin-left: auto;
+  font-family: ${fonts.SFMono};
+  // box-shadow: -10px 0px 30px -15px ${colors.boxShadow};
+  ${media.thone`padding: 25px`};
+  ${media.phablet`width: 75vw;`};
+  ${media.tiny`padding: 15px;`};
+  &:before {
+    content: '';
+    color: ${colors.bullets};
+    font-size: ${fontSizes.small};
+    line-height: 12px;
+  }
 `;
 const NavLinks = styled.nav`
   ${mixins.flexBetween};
@@ -94,6 +116,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
       aria-hidden={!menuOpen}
       tabIndex={menuOpen ? 1 : -1}
     >
+      <SidebarBackground />
       <Sidebar>
         <NavLinks>
           <NavList>
