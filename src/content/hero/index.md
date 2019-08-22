@@ -11,7 +11,7 @@ subtitles:
   - 'Herzlich willkommen!'
   - '환영!'
   - 'ยินดีต้อนรับ!'
-contactText: 'Get In Touch'
+contactText: 'Say Hello'
 ---
 
 I'm a caffeinated-city-dweller dependent life-form software engineer who loves to travel, play
