@@ -26,20 +26,6 @@ const Heading = styled.h3`
     bottom: 4px;
     ${media.tablet`font-size: ${fontSizes.large};`};
   }
-
-  &:after {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 300px;
-    background-color: ${colors.headings};
-    position: relative;
-    top: -5px;
-    margin-left: 20px;
-    ${media.desktop`width: 200px`};
-    ${media.tablet`width: 100%;`};
-    ${media.thone`margin-left: 10px;`};
-  }
 `;
 
 export default Heading;

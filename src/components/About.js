@@ -3,7 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
-import { theme, mixins, media, Section, Heading } from '@styles';
+import {
+  theme,
+  mixins,
+  media,
+  Section,
+  Heading,
+  Declaration,
+  DeclarationBrackets,
+  DeclarationArrow
+} from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
 
@@ -54,9 +63,14 @@ const About = ({ data }) => {
 
   return (
     <AboutContainer id="about" ref={revealContainer}>
-      <Heading>{title}</Heading>
+      <Heading>
+        <Declaration>{title}</Declaration>
+        <DeclarationBrackets />
+        <DeclarationArrow />
+      </Heading>
       <FlexContainer>
         <ContentContainer>
+          // eslint-disable-next-line react/no-danger
           <div dangerouslySetInnerHTML={{ __html: html }} />
           <SkillsContainer>
             {skills && skills.map(skill => <Skill key={skill}>{skill}</Skill>)}
