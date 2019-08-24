@@ -1,5 +1,5 @@
 ---
-title: 'Hi, my name is'
+title: '_name'
 name: 'King Larce Cortes'
 subtitles:
   - 'Welcome!'

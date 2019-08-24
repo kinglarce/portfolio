@@ -1,62 +1,93 @@
-const color = {
-  // Current Theme
-  // Highlights
+const lightScheme = {
+  // Light Theme
   darkest: '#000000',
-  // Colors for Bullets, "Hi" text or intro, Counting "01.", Hovering Links and Button
-  // Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
   dark: '#757474',
-  // Headings (h1, h2, ...)
   darkestWhite: '#9B9B9B',
-  // Nav Link Color
-  // Email & Social Media Color
-  // Box Shadows
   darkerWhite: '#B6B6B6',
-  // Mobile Nav Menu Background
   darkWhite: '#E7E7E7',
-  // Nav & Body Background
-  // Footer Background
   white: '#FFFFFF',
-  // darkerWhite: 'rgb(89,79,79, 0.7)', // Box Shadows
-  // Old Theme
-  lightGreen: '#E5FCC2', // Highlights
-  lightBlueGreen: '#9DE0AD', // Headings (h1, h2, ...)
-  blueGreen: '#45ADA8', // Colors for Bullets, "Hi" text, Counting "01.", Hovering Links and Button
-  darkBlue: '#547980', // Colors for About Skills, Footer, Hero Subtitle Typings, Cursor and Paragraph Color
-  lightDarkBlue: '#76a0a8', // Email & Social Media Color
-  lighterDarkBlue: '#9DBEC4', // Nav Link Color
-  gray: '#7d7272', // Mobile Nav Menu Background
-  darkGray: '#594F4F', // Footer Background
-  darkerGray: '#4d4545', // Nav & Body Background
-  shadowDarkGray: 'rgb(89,79,79, 0.7)' // Box Shadows
+  lightDarkBlue: '#76a0a8',
+  lighterDarkBlue: '#9DBEC4'
+};
+
+const darkScheme = {
+  // Dark Theme
+  background: '#212121',
+  scrollbars: '#EEFFFF20',
+  lineNumbers: '#424242',
+  comments: '#545454',
+  findHighlight: '#FFCC00',
+  focusBorder: '#FFFFFF',
+  guides: '#424242',
+  invisibles: '#65737E',
+
+  constCurlyBracket: '#C792EA',
+  constName: '#FF5370',
+  equals: '#bb80b3',
+  require: '#82AAFF',
+  importExport: '#89DDFF',
+  string: '#C3E88D',
+  moduleExport: '#B2CCD6',
+  brackets: '#FFCC00'
 };
 
 const theme = {
   colors: {
-    highlights: color.darkest,
-    highlightText: color.white,
-    bullets: color.dark,
-    introText: color.dark,
-    pseudoElem: color.dark,
-    links: color.lightDarkBlue,
-    hoverLinks: color.darkest,
-    buttons: color.dark,
-    hoverButtons: color.darkest,
-    hoverTextButtons: color.darkWhite,
-    bodyText: color.dark,
-    footerText: color.dark,
-    subtitle: color.dark,
-    cursor: color.dark,
-    headings: color.darkestWhite,
-    navLinks: color.dark,
-    socialMedia: color.lighterDarkBlue,
-    email: color.lighterDarkBlue,
-    boxShadow: color.darkerWhite,
-    hoverBoxShadow: color.dark,
-    mobileNavHamburger: color.dark,
-    mobileNavBackground: color.darkWhite,
-    navBackground: color.white,
-    bodyBackground: color.white,
-    footerBackground: color.white
+    highlights: darkScheme.findHighlight,
+    highlightText: darkScheme.background,
+    bullets: darkScheme.require,
+    introText: darkScheme.constName,
+    pseudoElem: darkScheme.importExport,
+    links: darkScheme.importExport,
+    hoverLinks: darkScheme.constName,
+    buttons: darkScheme.focusBorder,
+    hoverButtons: darkScheme.constName,
+    hoverTextButtons: darkScheme.focusBorder,
+    bodyText: darkScheme.focusBorder,
+    footerText: darkScheme.focusBorder,
+    subtitle: darkScheme.string,
+    cursor: darkScheme.string,
+    headings: darkScheme.focusBorder,
+    navLinks: darkScheme.focusBorder,
+    socialMedia: darkScheme.focusBorder,
+    email: darkScheme.focusBorder,
+    boxShadow: darkScheme.lineNumbers,
+    hoverBoxShadow: darkScheme.scrollbars,
+    mobileNavHamburger: darkScheme.constName,
+    mobileNavBackground: darkScheme.scrollbars,
+    navBackground: darkScheme.background,
+    bodyBackground: darkScheme.background,
+    footerBackground: darkScheme.background,
+    variableDeclaration: darkScheme.constCurlyBracket
+  },
+
+  colors_2: {
+    highlights: lightScheme.darkest,
+    highlightText: lightScheme.white,
+    bullets: lightScheme.dark,
+    introText: lightScheme.dark,
+    pseudoElem: lightScheme.dark,
+    links: lightScheme.lightDarkBlue,
+    hoverLinks: lightScheme.darkest,
+    buttons: lightScheme.dark,
+    hoverButtons: lightScheme.darkest,
+    hoverTextButtons: lightScheme.darkWhite,
+    bodyText: lightScheme.dark,
+    footerText: lightScheme.dark,
+    subtitle: lightScheme.dark,
+    cursor: lightScheme.dark,
+    headings: lightScheme.darkestWhite,
+    navLinks: lightScheme.dark,
+    socialMedia: lightScheme.lighterDarkBlue,
+    email: lightScheme.lighterDarkBlue,
+    boxShadow: lightScheme.darkerWhite,
+    hoverBoxShadow: lightScheme.dark,
+    mobileNavHamburger: lightScheme.dark,
+    mobileNavBackground: lightScheme.darkWhite,
+    navBackground: lightScheme.white,
+    bodyBackground: lightScheme.white,
+    footerBackground: lightScheme.white,
+    variableDeclaration: darkScheme.darkWhite
   },
 
   fonts: {

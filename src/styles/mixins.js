@@ -30,6 +30,12 @@ const mixins = {
     align-items: center;
   `,
 
+  flexStart: css`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  `,
+
   outline: css`
     outline: 1px solid red;
   `,

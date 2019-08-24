@@ -10,6 +10,7 @@ import Footer from '@styles/components/Footer';
 import Heading from '@styles/components/Heading';
 import Button from '@styles/components/Button';
 import InlineLink from '@styles/components/InlineLink';
+import Declaration from '@styles/components/Declaration';
 
 export {
   theme,
@@ -22,5 +23,6 @@ export {
   Footer,
   Heading,
   Button,
-  InlineLink
+  InlineLink,
+  Declaration
 };

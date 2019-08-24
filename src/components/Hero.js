@@ -6,7 +6,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Typer from '@components/Typer';
 
 import { email } from '@config';
-import { theme, mixins, media, Section } from '@styles';
+import { theme, mixins, media, Section, Declaration } from '@styles';
 
 const { colors, fontSizes, fonts, mountingDelays } = theme;
 
@@ -38,14 +38,17 @@ const Name = styled.h2`
   ${media.phablet`font-size: 50px;`};
   ${media.phone`font-size: 40px;`};
 `;
+
 const Subtitle = styled.h3`
-  font-size: 50px;
+  ${mixins.flexStart};
+  font-size: ${fontSizes.h3};
+  font-family: ${fonts.SFMono};
   line-height: 1.1;
   color: ${colors.subtitle};
-  ${media.desktop`font-size: 50px;`};
-  ${media.tablet`font-size: 40px;`};
-  ${media.phablet`font-size: 30px;`};
-  ${media.phone`font-size: 20px;`};
+  ${media.desktop`font-size: ${fontSizes.h3};`};
+  ${media.tablet`font-size: ${fontSizes.xxlarge};`};
+  ${media.phablet`font-size: ${fontSizes.xlarge};`};
+  ${media.phone`font-size: ${fontSizes.large};`};
 `;
 const Blurb = styled.div`
   margin-top: 25px;
@@ -71,7 +74,11 @@ const Hero = ({ data }) => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = () => <Hi style={{ transitionDelay: '100ms' }}>{frontmatter.title}</Hi>;
+  const one = () => (
+    <Hi style={{ transitionDelay: '100ms' }}>
+      <Declaration>{frontmatter.title}</Declaration>
+    </Hi>
+  );
   const two = () => (
     <Name style={{ transitionDelay: '200ms' }}>
       {frontmatter.name}
@@ -81,6 +88,7 @@ const Hero = ({ data }) => {
   const three = useCallback(
     () => (
       <Subtitle style={{ transitionDelay: '600ms' }}>
+        <span>//</span>
         <Typer data={frontmatter.subtitles} />
       </Subtitle>
     ),

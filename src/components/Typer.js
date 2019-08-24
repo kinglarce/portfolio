@@ -5,16 +5,16 @@ import styled from 'styled-components';
 import { theme, media } from '@styles';
 import { useStateWithCallback } from '@utils';
 
-const { colors } = theme;
+const { colors, fontSizes } = theme;
 
 const Cursor = styled.span`
-  font-size: 50px;
+  font-size: ${fontSizes.h3};
   line-height: 1.1;
   color: ${colors.cursor};
-  ${media.desktop`font-size: 50px;`};
-  ${media.tablet`font-size: 40px;`};
-  ${media.phablet`font-size: 30px;`};
-  ${media.phone`font-size: 20px;`};
+  ${media.desktop`font-size: ${fontSizes.h3};`};
+  ${media.tablet`font-size: ${fontSizes.xxlarge};`};
+  ${media.phablet`font-size: ${fontSizes.xlarge};`};
+  ${media.phone`font-size: ${fontSizes.large};`};
   animation: 1s blink step-end infinite;
 `;
 
