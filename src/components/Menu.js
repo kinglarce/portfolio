@@ -41,7 +41,7 @@ const Sidebar = styled.div`
 const SidebarBackground = styled.div`
   ${mixins.flexCenter};
   flex-direction: initial;
-  background-color: ${colors.mobileNavBackground};
+  background-color: ${colors.mobileNavTopBackground};
   padding: 50px;
   width: 50vw;
   height: 20%;
