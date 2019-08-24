@@ -49,8 +49,8 @@ module.exports = {
   googleAnalyticsID: 'UA-145899832-1',
 
   navHeight: 100,
-  themeColor: '#757474',
-  backgroundColor: '#FFFFFF',
+  themeColor: '#424242',
+  backgroundColor: '#212121',
 
   srConfig: (delay = 200) => ({
     origin: 'bottom',
