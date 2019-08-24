@@ -22,7 +22,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
-        icon: 'src/images/logo.svg'
+        icon: 'static/logo.svg'
       }
     },
     `gatsby-plugin-offline`,
@@ -59,6 +59,14 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: config.googleAnalyticsID
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /svg/
+        }
       }
     }
   ]

@@ -35,7 +35,8 @@ const theme = {
   colors: {
     highlights: darkScheme.findHighlight,
     highlightText: darkScheme.background,
-    bullets: darkScheme.require,
+    bulletsText: darkScheme.require,
+    bulletsIcons: darkScheme.scrollbars,
     introText: darkScheme.constName,
     pseudoElem: darkScheme.importExport,
     links: darkScheme.focusBorder,
@@ -65,7 +66,8 @@ const theme = {
   colors_2: {
     highlights: lightScheme.darkest,
     highlightText: lightScheme.white,
-    bullets: lightScheme.dark,
+    bulletsText: lightScheme.dark,
+    bulletsIcons: lightScheme.dark,
     introText: lightScheme.dark,
     pseudoElem: lightScheme.dark,
     links: lightScheme.lightDarkBlue,

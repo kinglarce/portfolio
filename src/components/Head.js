@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import favicon from '@static/favicon.ico';
-// import ogImage from '@images/og.png';
+// import ogImage from '@static/og.png';
 
 import config from '@config';
 

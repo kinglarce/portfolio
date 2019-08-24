@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IconGithub, IconLinkedin, IconInstagram, IconFacebook } from '@components/Icons';
+import { FormattedIcon } from '@components/Icons';
 import { socialMedia } from '@config';
 
 import { theme, mixins, media } from '@styles';
@@ -42,13 +42,6 @@ const Copy = styled.div`
   line-height: 1;
 `;
 
-const Icons = {
-  Github: <IconGithub />,
-  Linkedin: <IconLinkedin />,
-  Instagram: <IconInstagram />,
-  Facebook: <IconFacebook />
-};
-
 const Footer = () => (
   <FooterContainer>
     <SocialContainer>
@@ -62,7 +55,7 @@ const Footer = () => (
                 rel="nofollow noopener noreferrer"
                 aria-label={name}
               >
-                {name ? Icons[name] : <IconGithub />}
+                <FormattedIcon name={name} />
               </SocialLink>
             </li>
           ))}

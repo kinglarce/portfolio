@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import sr from '@utils/sr';
+import { FormattedIcon } from '@components/Icons';
 import { srConfig } from '@config';
 import {
   theme,
@@ -43,15 +44,16 @@ const Skill = styled.li`
   margin-bottom: 10px;
   padding-left: 20px;
   font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.smallish};
-  color: ${colors.bullets};
-  &:before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: ${colors.bullets};
-    font-size: ${fontSizes.small};
-    line-height: 12px;
+  font-size: ${fontSizes.small};
+  color: ${colors.bulletsText};
+  background-color: ${colors.bulletsIcons};
+  padding: 10px;
+  svg {
+    width: ${fontSizes.small};
+    height: ${fontSizes.small};
+  }
+  span {
+    margin-left: 10px;
   }
 `;
 
@@ -72,7 +74,13 @@ const About = ({ data }) => {
         <ContentContainer>
           <div dangerouslySetInnerHTML={{ __html: html }} />
           <SkillsContainer>
-            {skills && skills.map(skill => <Skill key={skill}>{skill}</Skill>)}
+            {skills &&
+              skills.map(skill => (
+                <Skill key={skill}>
+                  <FormattedIcon name={skill} />
+                  <span>{skill}</span>
+                </Skill>
+              ))}
           </SkillsContainer>
         </ContentContainer>
       </FlexContainer>
