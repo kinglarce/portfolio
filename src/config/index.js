@@ -3,13 +3,13 @@ module.exports = {
   siteDescription:
     'King Larce Cortes is a software engineer currently based in Tokyo, Japan which has 6 years of experience as a full-stack developer designing, implementing, testing, proposing and learning.',
   siteKeywords:
-    'Larce, King Larce, King Larce Cortes, kingcort01, hanzodarkria, software engineer, front-end engineer, web developer, software engineer japan, full-stack developer',
+    'King Larce, King Larce Cortes, kingcort01, hanzodarkria, software engineer, front-end engineer, web developer, software engineer japan, full-stack developer',
   siteUrl: 'http://www.kinglarce.com',
   siteLanguage: 'en_US',
 
   name: 'King Larce Cortes',
   location: 'Tokyo, Japan',
-  email: 'kingcort01@gmail.com',
+  email: 'hello@kinglarce.com',
   github: 'https://github.com/kinglarce',
   socialMedia: [
     {
@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/larzq/'
+      url: 'https://www.instagram.com/kinglarce/'
     },
     {
       name: 'Facebook',
