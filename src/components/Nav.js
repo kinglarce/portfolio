@@ -22,25 +22,14 @@ const NavContainer = styled.header`
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
+  width: 100%;
   height: ${props => (props.scrollDirection === 'none' ? theme.navHeight : theme.navScrollHeight)};
   box-shadow: none;
   transform: translateY(
     ${props => (props.scrollDirection === 'down' ? `-${theme.navScrollHeight}` : '0px')}
   );
-  ${media.giant`width: 80%;`};
-  ${media.bigDesktop`width: 80%;`};
-  ${media.desktop`
-    padding: 0 40px;
-    width: 80%;
-  `};
-  ${media.tablet`
-    width: 100%;
-    padding: 0 25px;
-  `};
-  ${media.thone`width: 100%;`};
-  ${media.phablet`width: 100%;`};
-  ${media.phone`width: 100%;`};
-  ${media.tiny`width: 100%;`};
+  ${media.desktop`padding: 0 40px;`};
+  ${media.tablet`padding: 0 25px;`};
 `;
 const Navbar = styled.nav`
   ${mixins.flexEnd};
