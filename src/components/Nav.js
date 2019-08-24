@@ -144,11 +144,6 @@ const NavListItem = styled.li`
 const NavLink = styled(AnchorLink)`
   padding: 12px 10px;
 `;
-const ResumeLink = styled.a`
-  ${mixins.smallButton};
-  margin-left: 10px;
-  font-size: ${fontSizes.smallish};
-`;
 
 const DELTA = 5;
 
@@ -252,18 +247,6 @@ const Nav = () => {
                 ))}
             </TransitionGroup>
           </NavList>
-
-          <TransitionGroup>
-            {isMounted && (
-              <CSSTransition classNames="fadedown" timeout={3000}>
-                <div style={{ transitionDelay: '600ms' }}>
-                  <ResumeLink href="/resume.pdf" target="_blank" rel="nofollow noopener noreferrer">
-                    Resume
-                  </ResumeLink>
-                </div>
-              </CSSTransition>
-            )}
-          </TransitionGroup>
         </NavLinks>
       </Navbar>
 

@@ -5,7 +5,7 @@ import { FormattedIcon } from '@components/Icons';
 import { socialMedia } from '@config';
 import { theme, media } from '@styles';
 
-const { colors } = theme;
+const { colors, mountingDelays } = theme;
 
 const SocialContainer = styled.div`
   width: 40px;
@@ -46,11 +46,13 @@ const SocialLink = styled.a`
   }
 `;
 
+const MOUNTING_DELAY = mountingDelays.social;
+
 const Social = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 2000);
+    const timeout = setTimeout(() => setIsMounted(true), MOUNTING_DELAY);
     return () => clearTimeout(timeout);
   }, []);
 

@@ -8,7 +8,7 @@ import Typer from '@components/Typer';
 import { email } from '@config';
 import { theme, mixins, media, Section } from '@styles';
 
-const { colors, fontSizes, fonts } = theme;
+const { colors, fontSizes, fonts, mountingDelays } = theme;
 
 const HeroContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -60,12 +60,14 @@ const EmailLink = styled.a`
   margin-top: 50px;
 `;
 
+const MOUNTING_DELAY = mountingDelays.hero;
+
 const Hero = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 1000);
+    const timeout = setTimeout(() => setIsMounted(true), MOUNTING_DELAY);
     return () => clearTimeout(timeout);
   }, []);
 
