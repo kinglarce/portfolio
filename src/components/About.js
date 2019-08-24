@@ -70,7 +70,6 @@ const About = ({ data }) => {
       </Heading>
       <FlexContainer>
         <ContentContainer>
-          // eslint-disable-next-line react/no-danger
           <div dangerouslySetInnerHTML={{ __html: html }} />
           <SkillsContainer>
             {skills && skills.map(skill => <Skill key={skill}>{skill}</Skill>)}
