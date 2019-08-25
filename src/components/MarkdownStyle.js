@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { theme, mixins } from '@styles';
 
-const { colors, fontSizes, fonts } = theme;
+const { colors, fontSizes } = theme;
 
 const MarkdownFeatured = styled.span`
   color: ${colors.highlights};
@@ -45,8 +45,7 @@ const MarkdownStyleArrayValue = styled.div`
 
 const MarkdownStyleContainer = styled.div`
   color: ${colors.bodyText};
-  font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.medium};
+  font-size: ${fontSizes.large};
   font-weight: normal;
   letter-spacing: 0.5px;
 `;

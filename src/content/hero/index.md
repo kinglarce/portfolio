@@ -14,5 +14,5 @@ subtitles:
 contactText: 'Say Hello'
 ---
 
-I'm a caffeinated-city-dweller dependent life-form software engineer who loves to travel, play
-sports and finding new adventures along the way.
+I'm a ☕ caffeinated-city-dweller dependent life-form who loves to travel, play sports and finding
+new adventures along the way.

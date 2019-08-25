@@ -8,10 +8,30 @@ url: 'https://nettrac.net'
 alias: 'Nettrac'
 fill: '#4956fc'
 techs:
-  - React
-  - Node.js
-  - Express
-  - Spotify Web API
+  - PHP
+  - Codeigniter
+  - PHPUnit
+  - Joomla
+  - WordPress
+  - CoffeeScript
+  - jQuery
+  - FabricJS
+  - MySQL
+  - Google Maps Platform
 ---
 
-- lorem ipsum
+- Engineered and maintained existing e-commerce platform where I handled Billing, Registration of
+  Domains, Search Mechamism for hosting Product and Control Panel for managing both domains and
+  hosting.
+- Successfully launched 5 web applications where I led and manage the development of 2 projects(ie
+  [eRoam](https://www.eroam.com/) and [Motize](https://www.motize.com/)). Those are applications
+  are:
+  - [eRoam](https://www.eroam.com/)
+  - [Motize](https://www.motize.com/)
+  - [Nettrac Shopping Cart](https://nettrac.net/)
+  - [Eatnoise](https://eatnoise.com/)
+  - [PMG Intelligence and eSight Survey Tool](https://www.pmgintelligence.com/)
+- Worked closely with the client to discuss estimations, prioritization and feasibility of the
+  features.
+- Apart from development, I also handled the maintenance of the servers, configuraing apache web
+  server and managing clients domains & DNS.

@@ -39,7 +39,7 @@ const theme = {
     bulletsIcons: darkScheme.scrollbars,
     introText: darkScheme.constName,
     pseudoElem: darkScheme.importExport,
-    links: darkScheme.focusBorder,
+    links: darkScheme.importExport,
     hoverLinks: darkScheme.constName,
     buttons: darkScheme.focusBorder,
     hoverButtons: darkScheme.constName,

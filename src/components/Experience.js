@@ -28,7 +28,7 @@ const Tabs = styled.ul`
   z-index: 3;
   ${media.thone`
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
     margin-bottom: 30px;
     width: calc(100% + 100px);
     margin-left: -50px;

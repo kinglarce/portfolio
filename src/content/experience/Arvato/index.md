@@ -8,10 +8,19 @@ url: 'https://www.arvato-systems.com/arvato-systems-en'
 alias: 'Arvato'
 fill: '#2A67A0'
 techs:
-  - React
-  - Node.js
-  - Express
-  - Spotify Web API
+  - Python
+  - Django
+  - C#
+  - Angular 4
+  - AngularJS
+  - Adobe CEP
+  - Jasmine
+  - Protractor
+  - Sass
+  - MSSQL
+  - Swagger
+  - jQuery
+  - Java
 ---
 
 - lorem ipsum
