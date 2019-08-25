@@ -211,7 +211,7 @@ const Experience = ({ data }) => {
                     <span>
                       <Icons name={alias} />
                     </span>
-                    <span>{company}</span>
+                    <span>{alias}</span>
                   </Tab>
                 </li>
               );

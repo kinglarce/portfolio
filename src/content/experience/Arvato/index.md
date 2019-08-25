@@ -2,7 +2,7 @@
 date: '2'
 title: 'Software Engineer'
 date_range: 'Aug 2016 - Jan 2019'
-company: 'Arvato Systems'
+company: 'Arvato Systems Malaysia'
 location: 'Kuala Lumpur, Malaysia'
 url: 'https://www.arvato-systems.com/arvato-systems-en'
 alias: 'Arvato'

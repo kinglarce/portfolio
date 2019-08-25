@@ -2,7 +2,7 @@
 date: '1'
 title: 'Software Engineer'
 date_range: 'Jul 2013 - Jul 2016'
-company: 'Nettrac Communication'
+company: 'Nettrac Communication Inc.'
 location: 'Cebu, Philippines'
 url: 'https://nettrac.net'
 alias: 'Nettrac'
