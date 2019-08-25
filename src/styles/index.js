@@ -10,7 +10,12 @@ import Footer from '@styles/components/Footer';
 import Heading from '@styles/components/Heading';
 import Button from '@styles/components/Button';
 import InlineLink from '@styles/components/InlineLink';
-import { Declaration, DeclarationBrackets, DeclarationArrow } from '@styles/components/Declaration';
+import {
+  Declaration,
+  DeclarationBrackets,
+  DeclarationArrow,
+  DeclarationJSX
+} from '@styles/components/Declaration';
 
 export {
   theme,
@@ -26,5 +31,6 @@ export {
   InlineLink,
   Declaration,
   DeclarationBrackets,
-  DeclarationArrow
+  DeclarationArrow,
+  DeclarationJSX
 };

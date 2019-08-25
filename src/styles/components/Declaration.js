@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import theme from '@styles/theme';
 import mixins from '@styles/mixins';
+import media from '@styles/media';
 
 const { colors, fonts } = theme;
 
@@ -42,4 +43,34 @@ const Declaration = styled.div`
   }
 `;
 
-export { Declaration, DeclarationBrackets, DeclarationArrow };
+const DeclarationJSX = styled.div`
+  font-family: ${fonts.SFMono};
+  font-weight: normal;
+  color: ${colors.introText};
+  ${props =>
+    props.isOpening === 'true'
+      ? `
+    &:before {
+      content: '<';
+      color: ${colors.pseudoElem};
+    }
+    `
+      : `
+    &:before {
+      content: '</';
+      color: ${colors.pseudoElem};
+    }
+    `}
+
+  &:after {
+    content: '>';
+    color: ${colors.pseudoElem};
+  }
+  ${media.giant`margin-left: -90px;`};
+  ${media.bigDesktop`margin-left: -70px;`};
+  ${media.desktop`margin-left: -30px;`};
+  ${media.tablet`margin-left: -20px;`};
+  ${media.thone`margin-left: 0px;`};
+`;
+
+export { Declaration, DeclarationBrackets, DeclarationArrow, DeclarationJSX };

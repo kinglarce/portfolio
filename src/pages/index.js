@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Main, mixins } from '@styles';
-import { Layout, Hero, About } from '@components';
+import { Layout, Hero, About, Experience } from '@components';
 
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
@@ -15,6 +15,7 @@ const IndexPage = ({ data }) => (
     <MainContainer id="content">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
+      <Experience data={data.experience.edges} />
     </MainContainer>
   </Layout>
 );
@@ -47,6 +48,23 @@ export const pageQuery = graphql`
           frontmatter {
             title
             skills
+          }
+          html
+        }
+      }
+    }
+    experience: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/experience/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            company
+            location
+            range
+            url
           }
           html
         }

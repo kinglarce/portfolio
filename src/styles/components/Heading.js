@@ -8,7 +8,7 @@ const Heading = styled.h3`
   position: relative;
   display: flex;
   align-items: center;
-  margin: 10px 0 40px;
+  margin: ${props => (props.margin ? props.margin : `10px 0 40px`)};
   width: 100%;
   white-space: nowrap;
   font-size: ${fontSizes.h3};
