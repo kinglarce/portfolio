@@ -20,17 +20,17 @@ techs:
   - Google Maps Platform
 ---
 
-- Engineered and maintained existing e-commerce platform where I handled Billing, Registration of
-  Domains, Search Mechamism for hosting Product and Control Panel for managing both domains and
+- Engineered and maintained existing e-commerce platform where I handled billing, registration of
+  domains, search functionality for products and control Panel for managing both domains and
   hosting.
-- Successfully launched 5 web applications where I led and manage the development of 2 projects(ie
+- Successfully launched 5 web applications where I led and managed the development of 2 projects(ie
   [eRoam](https://www.eroam.com/) and [Motize](https://www.motize.com/)). These are applications:
   - [eRoam](https://www.eroam.com/)
   - [Motize](https://www.motize.com/)
   - [Nettrac Shopping Cart](https://nettrac.net/)
   - [Eatnoise](https://eatnoise.com/)
   - [PMG Intelligence and eSight Survey Tool](https://www.pmgintelligence.com/)
-- Worked closely with the client to discuss estimations, prioritization and feasibility of the
+- Worked closely with the client to discuss estimations, prioritization, and feasibility of the
   features.
-- Apart from development, I also handled the maintenance of the servers, configuraing apache web
-  server and managing clients domains & DNS.
+- Handled the maintenance of the servers, configuring Apache web server and managing clients domains
+  & DNS.
