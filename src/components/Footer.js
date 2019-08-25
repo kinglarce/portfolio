@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormattedIcon } from '@components/Icons';
+import Icons from '@components/Icons';
 import { socialMedia } from '@config';
 
 import { theme, mixins, media } from '@styles';
@@ -55,7 +55,7 @@ const Footer = () => (
                 rel="nofollow noopener noreferrer"
                 aria-label={name}
               >
-                <FormattedIcon name={name} />
+                <Icons name={name} />
               </SocialLink>
             </li>
           ))}

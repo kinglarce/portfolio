@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import sr from '@utils/sr';
-import { FormattedIcon } from '@components/Icons';
+import Icons from '@components/Icons';
 import { srConfig } from '@config';
 import {
   theme,
@@ -77,7 +77,7 @@ const About = ({ data }) => {
             {skills &&
               skills.map(skill => (
                 <Skill key={skill}>
-                  <FormattedIcon name={skill} />
+                  <Icons name={skill} />
                   <span>{skill}</span>
                 </Skill>
               ))}

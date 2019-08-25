@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { FormattedIcon } from '@components/Icons';
+import Icons from '@components/Icons';
 import { socialMedia } from '@config';
 import { theme, media } from '@styles';
 
@@ -71,7 +71,7 @@ const Social = () => {
                       rel="nofollow noopener noreferrer"
                       aria-label={name}
                     >
-                      <FormattedIcon name={name} />
+                      <Icons name={name} />
                     </SocialLink>
                   </SocialItem>
                 ))}

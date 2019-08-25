@@ -19,6 +19,7 @@ import IconPython from '@static/svg/python.svg';
 import IconReactJS from '@static/svg/reactjs.svg';
 import IconRedux from '@static/svg/redux.svg';
 import IconSass from '@static/svg/sass.svg';
+import IconTypescript from '@static/svg/typescript.svg';
 
 const ICONS = {
   Github: <IconGithub />,
@@ -38,16 +39,17 @@ const ICONS = {
   Python: <IconPython />,
   ReactJS: <IconReactJS />,
   Redux: <IconRedux />,
-  Sass: <IconSass />
+  Sass: <IconSass />,
+  Typescript: <IconTypescript />
 };
 
-const FormattedIcon = ({ name }) => {
+const Icons = ({ name }) => {
   if (!ICONS[name]) return <IconGithub />;
   return ICONS[name];
 };
 
-FormattedIcon.propTypes = {
+Icons.propTypes = {
   name: PropTypes.string.isRequired
 };
 
-export default FormattedIcon;
+export default Icons;
