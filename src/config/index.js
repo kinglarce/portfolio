@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: "Hi! I'm King Larce Cortes",
   siteDescription:
-    'King Larce Cortes is a software engineer currently based in Tokyo, Japan which has 6 years of experience as a full-stack developer designing, implementing, testing, proposing and learning.',
+    'A ☕ caffeinated-city-dweller dependent software engineer who loves to travel, play sports and finding new adventures along the way.',
   siteKeywords:
     'King Larce, King Larce Cortes, kingcort01, hanzodarkria, software engineer, front-end engineer, web developer, software engineer japan, full-stack developer',
   siteUrl: 'http://www.kinglarce.com',
