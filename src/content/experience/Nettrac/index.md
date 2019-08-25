@@ -24,8 +24,7 @@ techs:
   Domains, Search Mechamism for hosting Product and Control Panel for managing both domains and
   hosting.
 - Successfully launched 5 web applications where I led and manage the development of 2 projects(ie
-  [eRoam](https://www.eroam.com/) and [Motize](https://www.motize.com/)). Those are applications
-  are:
+  [eRoam](https://www.eroam.com/) and [Motize](https://www.motize.com/)). These are applications:
   - [eRoam](https://www.eroam.com/)
   - [Motize](https://www.motize.com/)
   - [Nettrac Shopping Cart](https://nettrac.net/)
