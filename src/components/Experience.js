@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import sr from '@utils/sr';
+import Icons from '@components/Icons';
+import MarkdownStyle from '@components/MarkdownStyle';
 import { srConfig } from '@config';
 import { theme, mixins, media, Section, Heading, DeclarationJSX } from '@styles';
 
@@ -9,7 +11,7 @@ const { colors, fontSizes, fonts } = theme;
 
 const ExperienceContainer = styled(Section)`
   position: relative;
-  max-width: 800px;
+  max-width: 700px;
 `;
 const TabsContainer = styled.div`
   display: flex;
@@ -55,6 +57,7 @@ const Tabs = styled.ul`
     }
   }
 `;
+
 const Tab = styled.button`
   ${mixins.link};
   display: flex;
@@ -70,6 +73,12 @@ const Tab = styled.button`
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smallish};
   color: ${props => (props.isActive ? colors.highlights : colors.links)};
+  span {
+    padding: 0 5px;
+  }
+  span:first-child {
+    display: none;
+  }
   ${media.tablet`padding: 0 15px 2px;`};
   ${media.thone`
     ${mixins.flexCenter};
@@ -77,15 +86,27 @@ const Tab = styled.button`
     text-align: center;
     border-left: 0;
     border-bottom: 2px solid ${colors.highlights};
-    min-width: 120px;
+    min-width: 100%;
+    span:first-child {
+      display: block;
+    }
+    span:last-child {
+      display: ${props => (props.isActive ? 'block' : 'none')};
+    }
   `};
   &:hover,
   &:focus {
     color: ${colors.highlights};
     background-color: ${colors.navBackground};
   }
+  svg {
+    color: ${props => (props.isActive ? props.fill : colors.links)};
+    background-color: 'yellow';
+    width: ${fontSizes.large};
+    height: ${fontSizes.large};
   }
 `;
+
 const Highlighter = styled.span`
   display: block;
   background: ${colors.highlights};
@@ -118,7 +139,6 @@ const Highlighter = styled.span`
 `;
 const ContentContainer = styled.div`
   position: relative;
-  padding-top: 12px;
   padding-left: 30px;
   flex-grow: 1;
   ${media.tablet`padding-left: 20px;`};
@@ -139,13 +159,13 @@ const TabContent = styled.div`
     padding: 0;
     margin: 0;
     list-style: none;
-    font-size: ${fontSizes.large};
+    font-size: ${fontSizes.medium};
     li {
       position: relative;
-      padding-left: 30px;
+      padding-left: 20px;
       margin-bottom: 10px;
       &:before {
-        content: '▹';
+        content: '-';
         position: absolute;
         left: 0;
         color: ${colors.pseudoElem};
@@ -157,29 +177,9 @@ const TabContent = styled.div`
     ${mixins.inlineLink};
   }
 `;
-const JobTitle = styled.h4`
-  color: ${colors.bodyText};
-  font-size: ${fontSizes.xxlarge};
-  font-weight: 500;
-  margin-bottom: 5px;
-`;
-const Company = styled.span`
-  color: ${colors.bulletsText};
-  a {
-    color: ${colors.bulletsText};
-  }
-`;
-const JobDetails = styled.h5`
-  font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.smallish};
-  font-weight: normal;
-  letter-spacing: 0.5px;
-  color: ${colors.pseudoElem};
-  margin-bottom: 30px;
-  svg {
-    width: 15px;
-  }
-`;
+
+const EXCLUDE_DETAILS = ['alias', 'fill', 'url', 'techs'];
+const FEATURED = ['company', 'url'];
 
 const Experience = ({ data }) => {
   const [activeTabId, setActiveTabId] = useState(0);
@@ -195,7 +195,7 @@ const Experience = ({ data }) => {
         <Tabs role="tablist">
           {data &&
             data.map(({ node }, i) => {
-              const { company } = node.frontmatter;
+              const { company, alias, fill } = node.frontmatter;
               return (
                 <li key={company}>
                   <Tab
@@ -206,7 +206,11 @@ const Experience = ({ data }) => {
                     aria-controls={`tab${i}`}
                     id={`tab${i}`}
                     tabIndex={activeTabId === i ? '0' : '-1'}
+                    fill={fill}
                   >
+                    <span>
+                      <Icons name={alias} />
+                    </span>
                     <span>{company}</span>
                   </Tab>
                 </li>
@@ -218,7 +222,7 @@ const Experience = ({ data }) => {
           {data &&
             data.map(({ node }, i) => {
               const { frontmatter, html } = node;
-              const { title, url, company, range } = frontmatter;
+              const { company, techs } = frontmatter;
               return (
                 <TabContent
                   key={company}
@@ -229,19 +233,13 @@ const Experience = ({ data }) => {
                   aria-labelledby={`job${i}`}
                   aria-hidden={activeTabId !== i}
                 >
-                  <JobTitle>
-                    <span>{title}</span>
-                    <Company>
-                      <span>&nbsp;@&nbsp;</span>
-                      <a href={url} target="_blank" rel="nofollow noopener noreferrer">
-                        {company}
-                      </a>
-                    </Company>
-                  </JobTitle>
-                  <JobDetails>
-                    <span>{range}</span>
-                  </JobDetails>
-                  <div dangerouslySetInnerHTML={{ __html: html }} />
+                  <MarkdownStyle
+                    frontmatter={frontmatter}
+                    html={html}
+                    excludedDetails={EXCLUDE_DETAILS}
+                    featured={FEATURED}
+                    list={['techs', techs]}
+                  />
                 </TabContent>
               );
             })}

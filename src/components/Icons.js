@@ -21,6 +21,10 @@ import IconRedux from '@static/svg/redux.svg';
 import IconSass from '@static/svg/sass.svg';
 import IconTypescript from '@static/svg/typescript.svg';
 
+import IconArvato from '@static/svg/arvato.svg';
+import IconNettrac from '@static/svg/nettrac.svg';
+import IconRakuten from '@static/svg/rakuten.svg';
+
 const ICONS = {
   Github: <IconGithub />,
   Linkedin: <IconLinkedin />,
@@ -40,7 +44,10 @@ const ICONS = {
   ReactJS: <IconReactJS />,
   Redux: <IconRedux />,
   Sass: <IconSass />,
-  Typescript: <IconTypescript />
+  Typescript: <IconTypescript />,
+  Arvato: <IconArvato />,
+  Nettrac: <IconNettrac />,
+  Rakuten: <IconRakuten />
 };
 
 const Icons = ({ name }) => {

@@ -1,10 +1,17 @@
 ---
 date: '1'
 title: 'Software Engineer'
-company: 'NetTrac Communication'
+date_range: 'Jul 2013 - Jul 2016'
+company: 'Nettrac Communication'
 location: 'Cebu, Philippines'
-range: 'Jul 2013 - Jul 2016'
 url: 'https://nettrac.net'
+alias: 'Nettrac'
+fill: '#4956fc'
+techs:
+  - React
+  - Node.js
+  - Express
+  - Spotify Web API
 ---
 
 - lorem ipsum

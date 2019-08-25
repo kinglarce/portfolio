@@ -63,8 +63,11 @@ export const pageQuery = graphql`
             title
             company
             location
-            range
+            date_range
             url
+            alias
+            fill
+            techs
           }
           html
         }
