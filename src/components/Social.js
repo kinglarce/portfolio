@@ -13,7 +13,7 @@ const SocialContainer = styled.div`
   bottom: 0;
   right: 40px;
   color: ${colors.socialMedia};
-  ${media.desktop`left: 25px;`};
+  ${media.desktop`right: 25px;`};
   ${media.tablet`display: none;`};
 `;
 const SocialItemList = styled.ul`

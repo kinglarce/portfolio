@@ -65,9 +65,8 @@ const Tab = styled.button`
   width: 100%;
   background-color: transparent;
   height: ${theme.tabHeight}px;
-  padding: 0 20px 2px;
+  padding-right: 20px;
   transition: ${theme.transition};
-  border-left: 2px solid ${colors.boxShadow};
   text-align: left;
   white-space: nowrap;
   font-family: ${fonts.SFMono};
@@ -75,9 +74,6 @@ const Tab = styled.button`
   color: ${props => (props.isActive ? colors.highlights : colors.links)};
   span {
     padding: 0 5px;
-  }
-  span:first-child {
-    display: none;
   }
   ${media.tablet`padding: 0 15px 2px;`};
   ${media.thone`
@@ -87,10 +83,10 @@ const Tab = styled.button`
     border-left: 0;
     border-bottom: 2px solid ${colors.highlights};
     min-width: 100%;
-    span:first-child {
+    div:first-child {
       display: block;
     }
-    span:last-child {
+    div:last-child {
       display: ${props => (props.isActive ? 'block' : 'none')};
     }
   `};
@@ -99,42 +95,46 @@ const Tab = styled.button`
     color: ${colors.highlights};
     background-color: ${colors.navBackground};
   }
+`;
+
+const TabIconFolder = styled.div`
+  ${mixins.flexCenter};
+  width: ${fontSizes.xxlarge};
+  height: ${fontSizes.xxlarge};
+  position: relative;
+  background-color: ${props => (props.isActive ? colors.bodyText : colors.bulletsIcons)};
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
+  &:before {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: ${props => (props.isActive ? colors.bodyText : colors.bulletsIcons)};
+    position: absolute;
+    top: -2px;
+    left: 0px;
+  }
+  ${media.thone`
+    width: 0;
+    height: 0;
+    position: unset;
+  `}
+`;
+
+const TabIconContainer = styled.div`
+  ${mixins.flexCenter};
   svg {
+    width: ${fontSizes.medium};
+    height: ${fontSizes.medium};
+  }
+  span {
+    margin-left: -24px;
+    margin-right: 10px;
+    z-index: 1;
     color: ${props => (props.isActive ? props.fill : colors.links)};
-    background-color: 'yellow';
-    width: ${fontSizes.large};
-    height: ${fontSizes.large};
+    ${media.thone`margin-left: 0px;`}
   }
 `;
 
-const Highlighter = styled.span`
-  display: block;
-  background: ${colors.highlights};
-  width: 2px;
-  height: ${theme.tabHeight}px;
-  border-radius: ${theme.borderRadius};
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-delay: 0.1s;
-  z-index: 10;
-  transform: translateY(
-    ${props => (props.activeTabId > 0 ? props.activeTabId * theme.tabHeight : 0)}px
-  );
-  ${media.thone`
-    height: 2px;
-    top: auto;
-    bottom: 0;
-    transform: translateX(0);
-    margin-left: 50px;
-    width: 80%;
-    overflow: hidden;
-  `};
-  ${media.phablet`
-    margin-left: 25px;
-  `};
-`;
 const ContentContainer = styled.div`
   position: relative;
   padding-left: 30px;
@@ -179,6 +179,21 @@ const TabContent = styled.div`
 const EXCLUDE_DETAILS = ['alias', 'fill', 'url', 'techs'];
 const FEATURED = ['company', 'url'];
 
+const TabIcon = ({ alias, isActive, fill }) => (
+  <TabIconContainer isActive={isActive} fill={fill}>
+    <TabIconFolder isActive={isActive} />
+    <span>
+      <Icons name={alias} />
+    </span>
+  </TabIconContainer>
+);
+
+TabIcon.propTypes = {
+  alias: PropTypes.string.isRequired,
+  isActive: PropTypes.string.isRequired,
+  fill: PropTypes.string.isRequired
+};
+
 const Experience = ({ data }) => {
   const [activeTabId, setActiveTabId] = useState(0);
   const revealContainer = useRef(null);
@@ -204,17 +219,13 @@ const Experience = ({ data }) => {
                     aria-controls={`tab${i}`}
                     id={`tab${i}`}
                     tabIndex={activeTabId === i ? '0' : '-1'}
-                    fill={fill}
                   >
-                    <span>
-                      <Icons name={alias} />
-                    </span>
-                    <span>{alias}</span>
+                    <TabIcon alias={alias} isActive={activeTabId === i} fill={fill} />
+                    <div>{alias}</div>
                   </Tab>
                 </li>
               );
             })}
-          <Highlighter activeTabId={activeTabId} />
         </Tabs>
         <ContentContainer>
           {data &&

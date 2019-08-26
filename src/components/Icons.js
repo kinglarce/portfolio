@@ -24,6 +24,7 @@ import IconTypescript from '@static/svg/typescript.svg';
 import IconArvato from '@static/svg/arvato.svg';
 import IconNettrac from '@static/svg/nettrac.svg';
 import IconRakuten from '@static/svg/rakuten.svg';
+import IconFolder from '@static/svg/folder.svg';
 
 const ICONS = {
   Github: <IconGithub />,
@@ -47,7 +48,8 @@ const ICONS = {
   Typescript: <IconTypescript />,
   Arvato: <IconArvato />,
   Nettrac: <IconNettrac />,
-  Rakuten: <IconRakuten />
+  Rakuten: <IconRakuten />,
+  Folder: <IconFolder />
 };
 
 const Icons = ({ name }) => {
