@@ -40,7 +40,7 @@ const theme = {
     introText: darkScheme.constName,
     pseudoElem: darkScheme.importExport,
     links: darkScheme.importExport,
-    hoverLinks: darkScheme.constName,
+    hoverLinks: darkScheme.findHighlight,
     buttons: darkScheme.focusBorder,
     hoverButtons: darkScheme.constName,
     hoverTextButtons: darkScheme.focusBorder,

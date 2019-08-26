@@ -7,7 +7,6 @@ import { Layout, Hero, About, Experience } from '@components';
 
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
-  // counter-reset: section;
 `;
 
 const IndexPage = ({ data }) => (

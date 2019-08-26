@@ -131,8 +131,39 @@ const NavListItem = styled.li`
   // }
 `;
 const NavLink = styled(AnchorLink)`
-  padding: 12px 10px;
+  margin: 0 10px;
+  padding: 15px 20px;
   color: ${colors.navLinks};
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: ${colors.navLinks};
+    content: '';
+    transition: top 0.3s;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: ${colors.navLinks};
+    content: '';
+    transition: height 0.3s;
+  }
+
+  &:hover:before {
+    top: 100%;
+    opacity: 1;
+  }
+
+  &:hover:after {
+    height: 100%;
+  }
 `;
 
 const DELTA = 5;
