@@ -18,6 +18,10 @@ const Cursor = styled.span`
   animation: 1s blink step-end infinite;
 `;
 
+const TyperContainer = styled.div`
+  margin-left: 10px;
+`;
+
 const DELAY = 200;
 const COUNT = 3;
 
@@ -44,15 +48,17 @@ const Typer = ({ data }) => {
   };
 
   return typing ? (
-    <Typist avgTypingDelay={100} onTypingDone={onTypingDone} startDelay={1500}>
-      {subtitles.map(text => (
-        <span key={text}>
-          <Typist.Delay ms={DELAY} />
-          {text}
-          <Typist.Backspace count={text.length} delay={DELAY} />
-        </span>
-      ))}
-    </Typist>
+    <TyperContainer>
+      <Typist avgTypingDelay={100} onTypingDone={onTypingDone} startDelay={1500}>
+        {subtitles.map(text => (
+          <span key={text}>
+            <Typist.Delay ms={DELAY} />
+            {text}
+            <Typist.Backspace count={text.length} delay={DELAY} />
+          </span>
+        ))}
+      </Typist>
+    </TyperContainer>
   ) : (
     <Cursor>|</Cursor>
   );

@@ -1,9 +1,9 @@
 module.exports = {
   siteTitle: "Hi! I'm King Larce Cortes",
   siteDescription:
-    'A ☕ caffeinated-city-dweller dependent software engineer who loves to travel, play sports and finding new adventures along the way.',
+    'A ☕ caffeinated-city-dweller dependent life-form who loves to travel and finding new adventures along the way.',
   siteKeywords:
-    'King Larce, King Larce Cortes, kingcort01, hanzodarkria, software engineer, front-end engineer, web developer, software engineer japan, full-stack developer',
+    'King Larce, King Larce Cortes, kingcort01, hanzodarkria, software engineer, front-end engineer, web developer, software engineer japan, senior software engineer, full-stack developer',
   siteUrl: 'http://www.kinglarce.com',
   siteLanguage: 'en_US',
 

@@ -30,6 +30,7 @@ const SocialItemList = styled.ul`
 `;
 const SocialLink = styled.a`
   padding: 10px;
+  color: ${colors.socialMedia};
   svg {
     width: 20px;
     height: 20px;

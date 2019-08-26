@@ -132,6 +132,7 @@ const NavListItem = styled.li`
 `;
 const NavLink = styled(AnchorLink)`
   padding: 12px 10px;
+  color: ${colors.navLinks};
 `;
 
 const DELTA = 5;

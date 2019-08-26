@@ -10,8 +10,8 @@ const { colors, mountingDelays } = theme;
 const SocialContainer = styled.div`
   width: 40px;
   position: fixed;
-  top: 0;
-  left: 40px;
+  bottom: 0;
+  right: 40px;
   color: ${colors.socialMedia};
   ${media.desktop`left: 25px;`};
   ${media.tablet`display: none;`};
@@ -26,6 +26,7 @@ const SocialItemList = styled.ul`
     width: 1px;
     height: 90px;
     margin: 0 auto;
+    background-color: ${colors.socialMedia};
   }
 `;
 const SocialItem = styled.li`
@@ -35,6 +36,7 @@ const SocialItem = styled.li`
 `;
 const SocialLink = styled.a`
   padding: 10px;
+  color: ${colors.socialMedia};
   &:hover,
   &:focus {
     transform: translateY(-3px);

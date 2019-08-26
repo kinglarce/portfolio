@@ -123,15 +123,13 @@ const Highlighter = styled.span`
     ${props => (props.activeTabId > 0 ? props.activeTabId * theme.tabHeight : 0)}px
   );
   ${media.thone`
-    width: 100%;
-    max-width: ${theme.tabWidth}px;
     height: 2px;
     top: auto;
     bottom: 0;
-    transform: translateX(
-      ${props => (props.activeTabId > 0 ? props.activeTabId * theme.tabWidth : 0)}px
-    );
+    transform: translateX(0);
     margin-left: 50px;
+    width: 80%;
+    overflow: hidden;
   `};
   ${media.phablet`
     margin-left: 25px;
