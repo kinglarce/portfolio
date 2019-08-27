@@ -21,7 +21,7 @@ techs:
 ---
 
 - Engineered and maintained existing e-commerce platform where I handled billing, registration of
-  domains, search functionality for products and control Panel for managing both domains and
+  domains, search functionality for products and control panel for managing both domains and
   hosting.
 - Successfully launched 5 web applications where I led and managed the development of 2 projects(ie
   [eRoam](https://www.eroam.com/) and [Motize](https://www.motize.com/)). These are applications:

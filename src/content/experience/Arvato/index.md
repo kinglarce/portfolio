@@ -35,4 +35,4 @@ techs:
   [A.I. For Good Hackathon](https://thegrandchallenge.mdec.my/b-a-c-4-0-2017/) with a team that
   represented the company where we created a project called EMPian which uses IBM Watson NLP and got
   the first runner up.
-- Graphic artist for the company's social media
+- Graphic artist for the company's social media.
