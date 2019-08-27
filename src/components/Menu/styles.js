@@ -1,8 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { navLinks } from '@config';
 import { theme, mixins, media } from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
@@ -85,43 +82,4 @@ const NavLink = styled(AnchorLink)`
   width: 100%;
 `;
 
-const Menu = ({ menuOpen, toggleMenu }) => {
-  const handleMenuClick = e => {
-    const { target } = e;
-    const isLink = target.hasAttribute('href');
-    const isNotMenu = target.classList && target.classList[0].includes('MenuContainer');
-    if (isLink || isNotMenu) {
-      toggleMenu();
-    }
-  };
-
-  return (
-    <MenuContainer
-      menuOpen={menuOpen}
-      onClick={handleMenuClick}
-      aria-hidden={!menuOpen}
-      tabIndex={menuOpen ? 1 : -1}
-    >
-      <SidebarBackground />
-      <Sidebar>
-        <NavLinks>
-          <NavList>
-            {navLinks &&
-              navLinks.map(({ url, name }) => (
-                <NavListItem key={name}>
-                  <NavLink href={url}>{name}</NavLink>
-                </NavListItem>
-              ))}
-          </NavList>
-        </NavLinks>
-      </Sidebar>
-    </MenuContainer>
-  );
-};
-
-Menu.propTypes = {
-  menuOpen: PropTypes.bool.isRequired,
-  toggleMenu: PropTypes.func.isRequired
-};
-
-export default Menu;
+export { MenuContainer, Sidebar, SidebarBackground, NavLinks, NavList, NavListItem, NavLink };

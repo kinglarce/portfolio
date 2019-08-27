@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import favicon from '@static/favicon.ico';
-// import ogImage from '@static/og.png';
+import ogImage from '@static/og.png';
 
 import config from '@config';
 
@@ -21,14 +21,14 @@ const Head = ({ metadata }) => (
     <meta property="og:type" content="website" />
     <meta property="og:url" content={metadata.siteUrl} />
     <meta property="og:site_name" content={metadata.title} />
-    {/* <meta property="og:image" content={`${config.siteUrl}${ogImage}`} /> */}
+    <meta property="og:image" content={`${config.siteUrl}${ogImage}`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:locale" content={config.siteLanguage} />
     <meta itemProp="name" content={metadata.title} />
     <meta itemProp="description" content={metadata.description} />
-    {/* <meta itemProp="image" content={`${config.siteUrl}${ogImage}`} /> */}
+    <meta itemProp="image" content={`${config.siteUrl}${ogImage}`} />
 
     <meta name="theme-color" content={config.themeColor} />
   </Helmet>

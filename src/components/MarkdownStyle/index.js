@@ -1,71 +1,14 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { theme, mixins } from '@styles';
-
-const { colors, fontSizes } = theme;
-
-const MarkdownFeatured = styled.span`
-  color: ${colors.highlights};
-  a {
-    color: ${colors.highlights};
-  }
-`;
-
-const MarkdownStyleValue = styled.div`
-  color: ${colors.subtitle};
-  &:before,
-  &:after {
-    content: "'";
-    color: ${colors.pseudoElem};
-  }
-`;
-
-const MarkdownStyleLabel = styled.div`
-  color: ${colors.introText};
-  &:after {
-    content: ':';
-    color: ${colors.pseudoElem};
-    margin-right: 10px;
-  }
-`;
-
-const MarkdownStyleArrayValue = styled.div`
-  margin-top: 5px;
-  color: ${colors.subtitle};
-  &:before {
-    content: '[';
-    color: ${colors.pseudoElem};
-  }
-  &:after {
-    content: ']';
-    color: ${colors.pseudoElem};
-  }
-`;
-
-const MarkdownStyleContainer = styled.div`
-  color: ${colors.bodyText};
-  font-size: ${fontSizes.large};
-  font-weight: normal;
-  letter-spacing: 0.5px;
-`;
-
-const MarkdownStyleFrontmatter = styled.div`
-  margin-bottom: 20px;
-  &:before {
-    content: '---';
-    color: ${colors.bodyText};
-  }
-  &:after {
-    content: '---';
-    color: ${colors.bodyText};
-  }
-`;
-
-const MarkdownStyleContent = styled.div`
-  ${mixins.flexStart};
-  flex-wrap: nowrap;
-`;
+import {
+  MarkdownFeatured,
+  MarkdownStyleValue,
+  MarkdownStyleLabel,
+  MarkdownStyleArrayValue,
+  MarkdownStyleContainer,
+  MarkdownStyleFrontmatter,
+  MarkdownStyleContent
+} from './styles';
 
 const MarkdownStyle = ({ frontmatter, html, list, excludedDetails, featured }) => {
   const experienceDetails = useRef(frontmatter);
@@ -79,7 +22,7 @@ const MarkdownStyle = ({ frontmatter, html, list, excludedDetails, featured }) =
       <MarkdownStyleFrontmatter>
         {details.map(data => {
           return (
-            <MarkdownStyleContent>
+            <MarkdownStyleContent key={data}>
               <MarkdownStyleLabel>{data}</MarkdownStyleLabel>
               <MarkdownStyleValue>
                 {data === featuredKeys ? (
@@ -110,7 +53,9 @@ MarkdownStyle.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   frontmatter: PropTypes.object.isRequired,
   html: PropTypes.string.isRequired,
-  list: PropTypes.arrayOf(PropTypes.string).isRequired,
+  list: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
+  ).isRequired,
   excludedDetails: PropTypes.arrayOf(PropTypes.string),
   featured: PropTypes.arrayOf(PropTypes.string)
 };

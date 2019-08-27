@@ -1,8 +1,4 @@
-import React from 'react';
 import styled from 'styled-components';
-import Icons from '@components/Icons';
-import { socialMedia } from '@config';
-
 import { theme, mixins, media } from '@styles';
 
 const { colors, fontSizes, fonts } = theme;
@@ -43,27 +39,4 @@ const Copy = styled.div`
   line-height: 1;
 `;
 
-const Footer = () => (
-  <FooterContainer>
-    <SocialContainer>
-      <SocialItemList>
-        {socialMedia &&
-          socialMedia.map(({ name, url }) => (
-            <li key={name}>
-              <SocialLink
-                href={url}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                aria-label={name}
-              >
-                <Icons name={name} />
-              </SocialLink>
-            </li>
-          ))}
-      </SocialItemList>
-    </SocialContainer>
-    <Copy />
-  </FooterContainer>
-);
-
-export default Footer;
+export { FooterContainer, SocialContainer, SocialItemList, SocialLink, Copy };

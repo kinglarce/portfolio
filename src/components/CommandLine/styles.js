@@ -1,6 +1,4 @@
-import React from 'react';
 import styled from 'styled-components';
-import { promptUser, promptHost } from '@config';
 import { theme, media } from '@styles';
 
 const { colors } = theme;
@@ -30,18 +28,4 @@ const CommandLinePrompt = styled.div`
   }
 `;
 
-// eslint-disable-next-line react/prop-types
-const CommandLine = ({ children }) => (
-  <CommandLineContainer>
-    <pre className="language-bash">
-      <span className="command-line-prompt">
-        <CommandLinePrompt>
-          <span data-user={promptUser} data-host={promptHost} />
-        </CommandLinePrompt>
-      </span>
-      {children}
-    </pre>
-  </CommandLineContainer>
-);
-
-export default CommandLine;
+export { CommandLineContainer, CommandLinePrompt };
