@@ -16,6 +16,7 @@ import {
   DeclarationArrow,
   DeclarationJSX
 } from '@styles/components/Declaration';
+import { UpDown, UpDownWide } from '@styles/components/Animations';
 
 export {
   theme,
@@ -32,5 +33,7 @@ export {
   Declaration,
   DeclarationBrackets,
   DeclarationArrow,
-  DeclarationJSX
+  DeclarationJSX,
+  UpDown,
+  UpDownWide
 };
