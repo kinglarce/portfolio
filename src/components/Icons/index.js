@@ -20,6 +20,7 @@ import IconReactJS from '@static/svg/reactjs.svg';
 import IconRedux from '@static/svg/redux.svg';
 import IconSass from '@static/svg/sass.svg';
 import IconTypescript from '@static/svg/typescript.svg';
+import IconNodeJS from '@static/svg/nodejs.svg';
 
 import IconArvato from '@static/svg/arvato.svg';
 import IconNettrac from '@static/svg/nettrac.svg';
@@ -51,6 +52,7 @@ const ICONS = {
   Redux: <IconRedux />,
   Sass: <IconSass />,
   Typescript: <IconTypescript />,
+  NodeJS: <IconNodeJS />,
   Arvato: <IconArvato />,
   Nettrac: <IconNettrac />,
   Rakuten: <IconRakuten />,

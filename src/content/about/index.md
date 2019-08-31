@@ -2,20 +2,20 @@
 title: 'About'
 avatar: ''
 skills:
-  - Ansible - 24 - 5% - 50%
-  - Apollo - 16 - 10% - 30%
-  - Docker - 10 - 15% - 800%
-  - Gatsby - 8 - 20% - 100%
-  - GraphQL - 24 - 5% - 70%
-  - HapiJS - 24 - 5% - 70%
-  - Jenkins - 24 - 5% - 70%
-  - Jest - 24 - 5% - 70%
-  - MongoDB - 24 - 5% - 70%
-  - Python - 24 - 5% - 70%
-  - ReactJS - 24 - 5% - 70%
-  - Redux - 24 - 5% - 70%
-  - Sass - 24 - 5% - 70%
-  - Typescript - 24 - 5% - 70%
+  - Ansible - 16 - 70% - 5%
+  - Apollo - 32 - 0% - 5%
+  - Docker - 32 - 30% - -20%
+  - Gatsby - 24 - 70% - 60%
+  - GraphQL - 32 - 90% - 80%
+  - HapiJS - 16 - 80% - 40%
+  - Jenkins - 16 - 15% - 95%
+  - Jest - 16 - 50% - 100%
+  - MongoDB - 24 - 90% - 20%
+  - Python - 24 - 90% - -10%
+  - ReactJS - 48 - 35% - 15%
+  - Redux - 24 - 40% - 70%
+  - Typescript - 32 - 5% - 50%
+  - NodeJS - 24 - 80% - 110%
 ---
 
 Hello! I'm King Larce, a software engineer based in Tokyo, Japan who's hungry for explorations and
