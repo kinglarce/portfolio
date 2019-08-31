@@ -4,11 +4,18 @@ import Icons from '@components/Icons';
 import { SkillsContainer, SkillsList, SkillItem } from './styles';
 
 const Skill = ({ skillDetail }) => {
-  const [skill, size, left, top] = skillDetail.split(' - ');
+  const [skill, size, left, top, animation] = skillDetail.split(' - ');
   const isAnimated = true;
   return (
     <SkillItem>
-      <Icons name={skill} size={size} left={left} top={top} isAnimated={isAnimated} />
+      <Icons
+        name={skill}
+        size={size}
+        left={left}
+        top={top}
+        isAnimated={isAnimated}
+        animation={animation}
+      />
       <span>{skill}</span>
     </SkillItem>
   );

@@ -12,7 +12,7 @@ skills:
   - Jest - 16 - 50% - 100%
   - MongoDB - 24 - 90% - 20%
   - Python - 24 - 90% - -10%
-  - ReactJS - 48 - 35% - 15%
+  - ReactJS - 48 - 35% - 15% - updownwide
   - Redux - 24 - 40% - 70%
   - Typescript - 32 - 5% - 50%
   - NodeJS - 24 - 80% - 110%

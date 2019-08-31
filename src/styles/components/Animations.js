@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
+import media from '@styles/media';
 
 const rotate = keyframes`
   from {
@@ -57,12 +58,28 @@ const rotateAnimation = length => css`
 
 const UpDown = styled.div`
   animation: ${upDownAnimation};
-  position: relative;
+  position: absolute;
+  left: ${props => props.left};
+  top: ${props => props.top};
+  ${media.desktop`
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: none;
+  `};
 `;
 
 const UpDownWide = styled.div`
   animation: ${upDownWideAnimation};
-  position: relative;
+  position: absolute;
+  left: ${props => props.left};
+  top: ${props => props.top};
+  ${media.desktop`
+    position: relative;
+    left: 0;
+    top: 0;
+    animation: none;
+  `};
 `;
 
 export { waveAnimation, rotateAnimation, UpDown, UpDownWide };

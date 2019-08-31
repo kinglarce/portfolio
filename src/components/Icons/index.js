@@ -27,7 +27,7 @@ import IconNettrac from '@static/svg/nettrac.svg';
 import IconRakuten from '@static/svg/rakuten.svg';
 import IconFolder from '@static/svg/folder.svg';
 
-import { theme } from '@styles';
+import { theme, UpDown, UpDownWide } from '@styles';
 import { IconAnimatedContainer, IconContainer } from './styles';
 
 const { sizes } = theme;
@@ -59,15 +59,35 @@ const ICONS = {
   Folder: <IconFolder />
 };
 
-const Icons = ({ name, size, left, top, isAnimated }) => {
-  return isAnimated ? (
-    <IconAnimatedContainer iconSize={sizes[`${size}`]} left={left} top={top}>
-      {ICONS[name] ? ICONS[name] : <IconGithub />}
-    </IconAnimatedContainer>
-  ) : (
-    <IconContainer iconSize={sizes[`${size}`]}>
-      {ICONS[name] ? ICONS[name] : <IconGithub />}
-    </IconContainer>
+const Wrapper = ({ left, top, animation, children }) => {
+  const classifier = {
+    none: 'div',
+    updown: UpDown,
+    updownwide: UpDownWide
+  };
+  const IconWrapper = classifier[animation];
+  return (
+    <IconWrapper left={left} top={top}>
+      {children}
+    </IconWrapper>
+  );
+};
+
+Wrapper.propTypes = {
+  left: PropTypes.string.isRequired,
+  top: PropTypes.string.isRequired,
+  animation: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired
+};
+
+const Icons = ({ name, size, left, top, isAnimated, animation }) => {
+  const Container = isAnimated ? IconAnimatedContainer : IconContainer;
+  return (
+    <Wrapper left={left} top={top} animation={animation}>
+      <Container iconSize={sizes[`${size}`]} name={name} left={left} top={top}>
+        {ICONS[name] ? ICONS[name] : <IconGithub />}
+      </Container>
+    </Wrapper>
   );
 };
 
@@ -76,14 +96,16 @@ Icons.propTypes = {
   size: PropTypes.string,
   left: PropTypes.string,
   top: PropTypes.string,
-  isAnimated: PropTypes.bool
+  isAnimated: PropTypes.bool,
+  animation: PropTypes.string
 };
 
 Icons.defaultProps = {
   size: '4',
   left: '0%',
   top: '0%',
-  isAnimated: false
+  isAnimated: false,
+  animation: 'none'
 };
 
 export default Icons;

@@ -10,6 +10,13 @@ const IconAnimatedContainer = styled.div`
     height: ${props => props.iconSize};
     stroke: currentColor;
   }
+  ${media.bigDesktop`
+    svg {
+      width: calc( ${props => props.iconSize} / 1.3);
+      height: calc( ${props => props.iconSize} / 1.3);
+      stroke: currentColor;
+    }
+  `}
   ${media.desktop`
     position: relative;
     left: 0;
