@@ -7,5 +7,6 @@ import Social from '@components/Social';
 import Hero from '@components/Hero';
 import About from '@components/About';
 import Experience from '@components/Experience';
+import Shapes from '@components/Shapes';
 
-export { Footer, Head, Layout, Menu, Nav, Social, Hero, About, Experience };
+export { Footer, Head, Layout, Menu, Nav, Social, Hero, About, Experience, Shapes };
