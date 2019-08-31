@@ -1,17 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import sr from '@utils/sr';
-import Icons from '@components/Icons';
+import Skills from '@components/Skills';
 import { srConfig } from '@config';
 import { Heading, Declaration, DeclarationBrackets, DeclarationArrow } from '@styles';
-import { AboutContainer, FlexContainer, ContentContainer, SkillsContainer, Skill } from './styles';
+import { AboutContainer, FlexContainer, ContentContainer } from './styles';
 
 const About = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   const { title, skills } = frontmatter; // avatar
   const revealContainer = useRef(null);
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
-
   return (
     <AboutContainer id="about" ref={revealContainer}>
       <Heading>
@@ -22,16 +21,8 @@ const About = ({ data }) => {
       <FlexContainer>
         <ContentContainer>
           <div dangerouslySetInnerHTML={{ __html: html }} />
-          <SkillsContainer>
-            {skills &&
-              skills.map(skill => (
-                <Skill key={skill}>
-                  <Icons name={skill} />
-                  <span>{skill}</span>
-                </Skill>
-              ))}
-          </SkillsContainer>
         </ContentContainer>
+        <Skills skills={skills} />
       </FlexContainer>
     </AboutContainer>
   );

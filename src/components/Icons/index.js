@@ -26,6 +26,11 @@ import IconNettrac from '@static/svg/nettrac.svg';
 import IconRakuten from '@static/svg/rakuten.svg';
 import IconFolder from '@static/svg/folder.svg';
 
+import { theme } from '@styles';
+import { IconAnimatedContainer, IconContainer } from './styles';
+
+const { sizes } = theme;
+
 const ICONS = {
   Github: <IconGithub />,
   Linkedin: <IconLinkedin />,
@@ -52,13 +57,31 @@ const ICONS = {
   Folder: <IconFolder />
 };
 
-const Icons = ({ name }) => {
-  if (!ICONS[name]) return <IconGithub />;
-  return ICONS[name];
+const Icons = ({ name, size, left, top, isAnimated }) => {
+  return isAnimated ? (
+    <IconAnimatedContainer iconSize={sizes[`${size}`]} left={left} top={top}>
+      {ICONS[name] ? ICONS[name] : <IconGithub />}
+    </IconAnimatedContainer>
+  ) : (
+    <IconContainer iconSize={sizes[`${size}`]}>
+      {ICONS[name] ? ICONS[name] : <IconGithub />}
+    </IconContainer>
+  );
 };
 
 Icons.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  size: PropTypes.string,
+  left: PropTypes.string,
+  top: PropTypes.string,
+  isAnimated: PropTypes.bool
+};
+
+Icons.defaultProps = {
+  size: '4',
+  left: '0%',
+  top: '0%',
+  isAnimated: false
 };
 
 export default Icons;

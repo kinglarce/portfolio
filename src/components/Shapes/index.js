@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ShapeContainer, sizes } from './styles';
+import { theme } from '@styles';
+import ShapeContainer from './styles';
+
+const { sizes } = theme;
 
 const Triangle = (
   <polygon

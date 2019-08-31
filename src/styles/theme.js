@@ -111,19 +111,51 @@ const theme = {
     h3: '32px'
   },
 
+  sizes: {
+    auto: 'auto',
+    px: '1px',
+    '1': '0.25rem',
+    '2': '0.5rem',
+    '3': '0.75rem',
+    '4': '1rem',
+    '6': '1.5rem',
+    '8': '2rem',
+    '10': '2.5rem',
+    '12': '3rem',
+    '16': '4rem',
+    '24': '6rem',
+    '32': '8rem',
+    '48': '12rem',
+    '64': '16rem',
+    '1/2': '50%',
+    '1/3': '33.33333%',
+    '2/3': '66.66667%',
+    '1/4': '25%',
+    '3/4': '75%',
+    '1/5': '20%',
+    '2/5': '40%',
+    '3/5': '60%',
+    '4/5': '80%',
+    '1/6': '16.66667%',
+    '5/6': '83.33333%',
+    full: '100%',
+    screen: '100vw'
+  },
+
   easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
   transition: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)',
 
   borderRadius: '3px',
   navHeight: '100px',
   navScrollHeight: '70px',
+  skillsHeight: '40vw',
   margin: '20px',
 
   tabHeight: 42,
   tabWidth: 120,
   radius: 3,
 
-  gradient: `linear-gradient(0.4turn, #64d6ff, #64ffda)`,
+  gradient: `linear-gradient(0.4turn, #EEFFFF20, #545454)`,
 
   loaderDelay: `6`,
 

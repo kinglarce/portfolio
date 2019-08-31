@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { theme, mixins, media, Section } from '@styles';
-
-const { colors, fontSizes, fonts } = theme;
+import { mixins, media, Section } from '@styles';
 
 const AboutContainer = styled(Section)`
   position: relative;
@@ -12,35 +10,11 @@ const FlexContainer = styled.div`
   ${media.tablet`display: block;`};
 `;
 const ContentContainer = styled.div`
-  width: 60%;
-  max-width: 480px;
+  width: 70%;
   ${media.tablet`width: 100%;`};
   a {
     ${mixins.inlineLink};
   }
 `;
-const SkillsContainer = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
-  overflow: hidden;
-  margin-top: 20px;
-`;
-const Skill = styled.li`
-  position: relative;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.small};
-  color: ${colors.bulletsText};
-  background-color: ${colors.bulletsIcons};
-  padding: 10px;
-  svg {
-    width: ${fontSizes.small};
-    height: ${fontSizes.small};
-  }
-  span {
-    margin-left: 10px;
-  }
-`;
 
-export { AboutContainer, FlexContainer, ContentContainer, SkillsContainer, Skill };
+export { AboutContainer, FlexContainer, ContentContainer };
