@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icons from '@components/Icons';
-import { SkillsContainer } from './styles';
+import { SkillsContainer, SkillsList, SkillItem } from './styles';
 
 const Skill = ({ skillDetail }) => {
   const [skill, size, left, top] = skillDetail.split(' - ');
   const isAnimated = true;
-  return <Icons name={skill} size={size} left={left} top={top} isAnimated={isAnimated} />;
+  return (
+    <SkillItem>
+      <Icons name={skill} size={size} left={left} top={top} isAnimated={isAnimated} />
+      <span>{skill}</span>
+    </SkillItem>
+  );
 };
 
 Skill.propTypes = {
@@ -16,7 +21,9 @@ Skill.propTypes = {
 const Skills = ({ skills }) => {
   return (
     <SkillsContainer>
-      {skills && skills.map(skill => <Skill key={skill} skillDetail={skill} />)}
+      <SkillsList>
+        {skills && skills.map(skill => <Skill key={skill} skillDetail={skill} />)}
+      </SkillsList>
     </SkillsContainer>
   );
 };
