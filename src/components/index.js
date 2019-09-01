@@ -9,5 +9,6 @@ import About from '@components/About';
 import Experience from '@components/Experience';
 import Shapes from '@components/Shapes';
 import Skills from '@components/Skills';
+import Avatar from '@components/Avatar';
 
-export { Footer, Head, Layout, Menu, Nav, Social, Hero, About, Experience, Shapes, Skills };
+export { Footer, Head, Layout, Menu, Nav, Social, Hero, About, Experience, Shapes, Skills, Avatar };

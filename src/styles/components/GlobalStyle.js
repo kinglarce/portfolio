@@ -309,6 +309,85 @@ const GlobalStyle = createGlobalStyle`
     transition: opacity 1000ms ${theme.easing};
   }
 
+  .container-wrap {
+    margin: 140px auto 0;
+    font-size:0;
+    max-width: 560px;
+  }
+  .wrap {
+    @include transform( rotate(45deg) translate3d(0,0,0) );
+    display: inline-block;
+    @include transition(transform 300ms ease-out);
+    &:hover {
+      @include transition(transform 500ms ease-out);
+    @include transform( rotate(45deg) translate3d(10px,10px,0) );
+    }
+    width: 100px;
+    &:nth-child(even) {
+      width: 40px;
+      @include transform( rotate(225deg) translate3d(30px,120px,0) );
+      .crop img {
+        @include transform( skew(-20deg, -20deg) rotate(-225deg)   );
+      }
+    &:hover {
+    @include transform( rotate(225deg) translate3d(40px,130px,0) );
+    }
+    }
+  }
+  .crop {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0;
+    display: block;
+    overflow: hidden;
+    @include transform( skew(20deg, 20deg) translate3d(0,0,0));
+    img {
+      
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      left: -50%;
+      margin-top: 36px;
+      margin-left: 36px;
+      top: -50%;
+      @include transform( skew(-20deg, -20deg) rotate(-45deg) );
+      opacity: 0.7;
+      @include transition(opacity 300ms ease-in-out);
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  
+  /*
+  * ==== hexagon
+  */
+  .hexa, .hexa div {
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+  }
+  .hexa {
+    width: 325px;
+    height: 230px;
+  }
+  .hexa div {
+    width: 100%;
+    height: 100%;
+  }
+  .hexa {
+    transform: rotate(120deg);
+  }
+  .hex1 {
+    transform: rotate(-60deg);
+  }
+  .hex2 {
+    transform: rotate(-60deg);
+  }
+
 `;
 
 export default GlobalStyle;

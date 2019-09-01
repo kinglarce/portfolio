@@ -2,13 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import sr from '@utils/sr';
 import Skills from '@components/Skills';
+import Avatar from '@components/Avatar';
 import { srConfig } from '@config';
 import { Heading, Declaration, DeclarationBrackets, DeclarationArrow } from '@styles';
 import { AboutContainer, FlexContainer, ContentContainer } from './styles';
 
 const About = ({ data }) => {
   const { frontmatter, html } = data[0].node;
-  const { title, skills } = frontmatter; // avatar
+  const { title, skills, avatar } = frontmatter; // avatar
   const revealContainer = useRef(null);
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
   return (
@@ -19,10 +20,10 @@ const About = ({ data }) => {
         <DeclarationArrow />
       </Heading>
       <FlexContainer>
+        <Avatar avatar={avatar} />
         <ContentContainer>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </ContentContainer>
-        {/* <Skills skills={skills} /> */}
       </FlexContainer>
       <Skills skills={skills} />
     </AboutContainer>

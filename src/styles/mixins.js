@@ -147,6 +147,13 @@ const mixins = {
     &:focus {
       box-shadow: 0 20px 30px -15px ${colors.hoverBoxShadow};
     }
+  `,
+
+  transformTransitionEase: css`
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    transition-delay: 0.12s;
   `
 };
 

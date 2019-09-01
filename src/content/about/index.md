@@ -1,6 +1,6 @@
 ---
 title: 'About'
-avatar: ''
+avatar: './avatar.jpg'
 skills:
   - Ansible - 16 - 70% - 5% - updownwide
   - Apollo - 32 - -5% - 15% - updown
