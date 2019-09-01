@@ -2,9 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Typer from '@components/Typer';
-import { email } from '@config';
 import { theme, Declaration } from '@styles';
-import { HeroContainer, Intro, Name, Subtitle, Blurb, EmailLink } from './styles';
+import { HeroContainer, Intro, Name, Subtitle, Blurb } from './styles';
 
 const { mountingDelays } = theme;
 
@@ -37,13 +36,8 @@ const Hero = ({ data }) => {
   const four = () => (
     <Blurb style={{ transitionDelay: '400ms' }} dangerouslySetInnerHTML={{ __html: html }} />
   );
-  const five = () => (
-    <div style={{ transitionDelay: '500ms' }}>
-      <EmailLink href={`mailto:${email}`}>Say Hello</EmailLink>
-    </div>
-  );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three, four];
 
   return (
     <HeroContainer>

@@ -38,11 +38,11 @@ module.exports = {
     {
       name: 'Experience',
       url: '#experience'
+    },
+    {
+      name: 'Contact',
+      url: '#contact'
     }
-    // {
-    //   name: 'Contact',
-    //   url: '#contact'
-    // }
   ],
 
   googleVerification: 'C3x5mQAwG2Buk8dbFgbEcpFq6N3JsbqslPD-BU_hwPw',

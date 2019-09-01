@@ -8,7 +8,7 @@ const AvatarWrapper = styled.div`
   position: relative;
   width: 40%;
   max-width: 300px;
-  margin: 20px 80px;
+  margin: 20px 50px;
   ${media.tablet`
     margin: 0 auto 60px;
     width: 60%;

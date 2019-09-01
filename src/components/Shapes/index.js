@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { theme } from '@styles';
-import ShapeContainer from './styles';
+import { ShapeContainer, ShapeSvg } from './styles';
 
 const { sizes } = theme;
 
@@ -71,17 +71,16 @@ const SHAPES = {
   }
 };
 
-const Shape = ({ stroke, fill, size, shape, left, top, hiddenMobile }) => (
-  <ShapeContainer
-    viewBox={SHAPES[shape].viewBox}
-    stroke={stroke}
-    fill={fill}
-    svgSize={sizes[`${size}`]}
-    left={left}
-    top={top}
-    hiddenMobile={hiddenMobile}
-  >
-    {SHAPES[shape].shape}
+const Shape = ({ stroke, fill, size, shape, left, top }) => (
+  <ShapeContainer left={left} top={top}>
+    <ShapeSvg
+      viewBox={SHAPES[shape].viewBox}
+      stroke={stroke}
+      fill={fill}
+      svgSize={sizes[`${size}`]}
+    >
+      {SHAPES[shape].shape}
+    </ShapeSvg>
   </ShapeContainer>
 );
 
@@ -91,8 +90,7 @@ Shape.propTypes = {
   size: PropTypes.number,
   shape: PropTypes.oneOf(Object.keys(SHAPES)).isRequired,
   left: PropTypes.string,
-  top: PropTypes.string,
-  hiddenMobile: PropTypes.bool
+  top: PropTypes.string
 };
 
 Shape.defaultProps = {
@@ -100,8 +98,7 @@ Shape.defaultProps = {
   size: 8,
   fill: 'none',
   left: '0%',
-  top: '0%',
-  hiddenMobile: false
+  top: '0%'
 };
 
 export default Shape;

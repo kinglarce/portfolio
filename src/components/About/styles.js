@@ -10,7 +10,7 @@ const FlexContainer = styled.div`
   ${media.tablet`display: block;`};
 `;
 const ContentContainer = styled.div`
-  width: 50%;
+  width: 60%;
   ${media.tablet`width: 100%;`};
   a {
     ${mixins.inlineLink};

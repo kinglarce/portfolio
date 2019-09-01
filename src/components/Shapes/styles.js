@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
-const ShapeContainer = styled.svg`
+const ShapeContainer = styled.div`
   position: absolute;
-  stroke: currentColor;
-  ${props => props.hiddenMobile && `display: hidden`};
-  color: ${props => props.stroke};
-  width: ${props => props.svgSize};
-  height: ${props => props.svgSize};
-  fill: ${props => props.fill};
   left: ${props => props.left};
   top: ${props => props.top};
 `;
 
-export default ShapeContainer;
+const ShapeSvg = styled.svg`
+  stroke: currentColor;
+  color: ${props => props.stroke};
+  width: ${props => props.svgSize};
+  height: ${props => props.svgSize};
+  fill: ${props => props.fill};
+`;
+
+export { ShapeContainer, ShapeSvg };
