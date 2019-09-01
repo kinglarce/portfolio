@@ -27,6 +27,9 @@ import IconNettrac from '@static/svg/nettrac.svg';
 import IconRakuten from '@static/svg/rakuten.svg';
 import IconFolder from '@static/svg/folder.svg';
 
+import IconPlay from '@static/svg/play.svg';
+import IconStop from '@static/svg/stop.svg';
+
 import { theme, UpDown, UpDownWide } from '@styles';
 import { IconAnimatedContainer, IconContainer } from './styles';
 
@@ -56,7 +59,9 @@ const ICONS = {
   Arvato: <IconArvato />,
   Nettrac: <IconNettrac />,
   Rakuten: <IconRakuten />,
-  Folder: <IconFolder />
+  Folder: <IconFolder />,
+  Play: <IconPlay />,
+  Stop: <IconStop />
 };
 
 const IconAnimatedWrapper = ({ left, top, animation, children }) => {

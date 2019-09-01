@@ -3,6 +3,25 @@ import theme from '@styles/theme';
 
 const { colors } = theme;
 
+const NormalLink = styled.a`
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  transition: ${theme.transition};
+  cursor: pointer;
+  color: ${colors.links};
+  &:hover,
+  &:focus,
+  &:active {
+    color: ${colors.hoverLinks};
+    outline: 0;
+    &:after {
+      width: 100%;
+    }
+  }
+`;
+
 const InlineLink = styled.a`
   display: inline-block;
   text-decoration: none;
@@ -32,4 +51,4 @@ const InlineLink = styled.a`
   }
 `;
 
-export default InlineLink;
+export { NormalLink, InlineLink };

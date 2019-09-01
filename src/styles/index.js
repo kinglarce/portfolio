@@ -9,7 +9,7 @@ import Section from '@styles/components/Section';
 import Footer from '@styles/components/Footer';
 import Heading from '@styles/components/Heading';
 import Button from '@styles/components/Button';
-import InlineLink from '@styles/components/InlineLink';
+import { NormalLink, InlineLink } from '@styles/components/Link';
 import {
   Declaration,
   DeclarationBrackets,
@@ -29,6 +29,7 @@ export {
   Footer,
   Heading,
   Button,
+  NormalLink,
   InlineLink,
   Declaration,
   DeclarationBrackets,

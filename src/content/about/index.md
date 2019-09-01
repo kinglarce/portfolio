@@ -13,7 +13,7 @@ skills:
   - MongoDB - 24 - 95% - 20% - updownwide
   - Python - 24 - 90% - -10% - updown
   - ReactJS - 48 - 35% - 10%
-  - Redux - 24 - 25% - 50%  - updown
+  - Redux - 24 - 25% - 50%  - updownwide
   - Typescript - 32 - 5% - 50% - updown
   - NodeJS - 24 - 90% - 65% - updown
 ---

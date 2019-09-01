@@ -148,7 +148,7 @@ const theme = {
   borderRadius: '3px',
   navHeight: '100px',
   navScrollHeight: '70px',
-  skillsHeight: '40vw',
+  skillsHeight: '35vw',
   margin: '20px',
 
   tabHeight: 42,

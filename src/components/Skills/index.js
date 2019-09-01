@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Icons from '@components/Icons';
-import { SkillsContainer, SkillsList, SkillItem } from './styles';
+import { NormalLink } from '@styles';
+import { SkillsContainer, SkillsList, SkillItem, SkillsMenu } from './styles';
 
-const Skill = ({ skillDetail }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [animate, setAnimate] = useState('none');
-  // eslint-disable-next-line no-unused-vars
+const Skill = ({ skillDetail, play }) => {
   const [skill, size, left, top, animationCurrent] = skillDetail.split(' - ');
   const isAnimated = true;
-  const animation = animate;
+  const animation = play ? animationCurrent : 'none';
   return (
     <SkillItem>
       <Icons
@@ -26,14 +24,24 @@ const Skill = ({ skillDetail }) => {
 };
 
 Skill.propTypes = {
-  skillDetail: PropTypes.string.isRequired
+  skillDetail: PropTypes.string.isRequired,
+  play: PropTypes.bool.isRequired
 };
 
 const Skills = ({ skills }) => {
+  const [play, setPlay] = useState(false);
+  const togglePlay = useCallback(() => {
+    setPlay(!play);
+  }, [play]);
   return (
     <SkillsContainer>
+      <SkillsMenu>
+        <NormalLink onClick={togglePlay}>
+          <Icons name={play ? 'Stop' : 'Play'} />
+        </NormalLink>
+      </SkillsMenu>
       <SkillsList>
-        {skills && skills.map(skill => <Skill key={skill} skillDetail={skill} />)}
+        {skills && skills.map(skill => <Skill key={skill} skillDetail={skill} play={play} />)}
       </SkillsList>
     </SkillsContainer>
   );

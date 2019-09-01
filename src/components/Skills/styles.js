@@ -43,4 +43,10 @@ const SkillItem = styled.li`
   `};
 `;
 
-export { SkillsContainer, SkillsList, SkillItem };
+const SkillsMenu = styled.div`
+  ${media.tablet`
+    display: none;
+  `}
+`;
+
+export { SkillsContainer, SkillsList, SkillItem, SkillsMenu };
