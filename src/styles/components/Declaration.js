@@ -66,9 +66,7 @@ const DeclarationJSX = styled.div`
     content: '>';
     color: ${colors.pseudoElem};
   }
-  ${media.giant`margin-left: -90px;`};
-  ${media.bigDesktop`margin-left: -70px;`};
-  ${media.desktop`margin-left: -30px;`};
+  margin-left: -70px;
   ${media.tablet`margin-left: -20px;`};
   ${media.thone`margin-left: 0px;`};
 `;

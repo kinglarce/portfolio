@@ -28,17 +28,16 @@ const TabIconFolder = styled.div`
 
 const TabIconContainer = styled.div`
   ${mixins.flexCenter};
-  svg {
-    width: ${fontSizes.medium};
-    height: ${fontSizes.medium};
-  }
   span {
     margin-left: -24px;
     margin-right: 10px;
     z-index: 1;
     color: ${props => (props.isActive ? props.fill : colors.links)};
-    ${media.thone`margin-left: 0px;`}
   }
+  ${media.desktop`
+    margin-left: 7px;
+    margin-right: 7px;
+  `}
 `;
 
 export { TabIconFolder, TabIconContainer };

@@ -66,13 +66,9 @@ const Tab = styled.button`
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smallish};
   color: ${props => (props.isActive ? colors.highlights : colors.links)};
-  span {
-    padding: 0 5px;
-  }
-  ${media.tablet`padding: 0 15px 2px;`};
+
   ${media.thone`
     ${mixins.flexCenter};
-    padding: 0 15px;
     text-align: center;
     border-left: 0;
     border-bottom: 2px solid ${colors.highlights};
