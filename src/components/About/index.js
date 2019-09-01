@@ -22,8 +22,9 @@ const About = ({ data }) => {
         <ContentContainer>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </ContentContainer>
-        <Skills skills={skills} />
+        {/* <Skills skills={skills} /> */}
       </FlexContainer>
+      <Skills skills={skills} />
     </AboutContainer>
   );
 };

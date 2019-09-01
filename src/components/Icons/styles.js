@@ -17,7 +17,7 @@ const IconAnimatedContainer = styled.div`
       stroke: currentColor;
     }
   `}
-  ${media.desktop`
+  ${media.tablet`
     position: relative;
     left: 0;
     top: 0;

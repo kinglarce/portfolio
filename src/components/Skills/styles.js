@@ -7,7 +7,7 @@ const SkillsContainer = styled.div`
   position: relative;
   width: 100%;
   height: ${skillsHeight};
-  ${media.desktop`
+  ${media.tablet`
     height: 100%;
     margin-left: 60px;
   `};
@@ -15,9 +15,9 @@ const SkillsContainer = styled.div`
 `;
 
 const SkillsList = styled.ul`
-  ${media.desktop`
+  ${media.tablet`
     display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-template-columns: repeat(2,40vw);
     overflow: hidden;
   `};
 `;
@@ -26,7 +26,7 @@ const SkillItem = styled.li`
   span {
     display: none;
   }
-  ${media.desktop`
+  ${media.tablet`
     ${mixins.flexStart}
     position: relative;
     margin-bottom: 10px;
