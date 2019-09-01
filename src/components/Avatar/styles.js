@@ -7,7 +7,8 @@ const { colors } = theme;
 const AvatarWrapper = styled.div`
   position: relative;
   width: 40%;
-  margin-right: 30px;
+  max-width: 300px;
+  margin: 20px 80px;
   ${media.tablet`
     margin: 0 auto 60px;
     width: 60%;
