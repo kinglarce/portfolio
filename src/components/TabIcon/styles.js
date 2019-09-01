@@ -29,7 +29,7 @@ const TabIconFolder = styled.div`
 const TabIconContainer = styled.div`
   ${mixins.flexCenter};
   span {
-    margin-left: -24px;
+    margin-left: -19px;
     margin-right: 10px;
     z-index: 1;
     color: ${props => (props.isActive ? props.fill : colors.links)};

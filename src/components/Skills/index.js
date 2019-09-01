@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Icons from '@components/Icons';
 import { SkillsContainer, SkillsList, SkillItem } from './styles';
 
 const Skill = ({ skillDetail }) => {
-  const [skill, size, left, top, animation] = skillDetail.split(' - ');
+  // eslint-disable-next-line no-unused-vars
+  const [animate, setAnimate] = useState('none');
+  // eslint-disable-next-line no-unused-vars
+  const [skill, size, left, top, animationCurrent] = skillDetail.split(' - ');
   const isAnimated = true;
+  const animation = animate;
   return (
     <SkillItem>
       <Icons

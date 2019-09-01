@@ -59,7 +59,7 @@ const ICONS = {
   Folder: <IconFolder />
 };
 
-const Wrapper = ({ left, top, animation, children }) => {
+const IconAnimatedWrapper = ({ left, top, animation, children }) => {
   const classifier = {
     none: 'div',
     updown: UpDown,
@@ -73,7 +73,7 @@ const Wrapper = ({ left, top, animation, children }) => {
   );
 };
 
-Wrapper.propTypes = {
+IconAnimatedWrapper.propTypes = {
   left: PropTypes.string.isRequired,
   top: PropTypes.string.isRequired,
   animation: PropTypes.string.isRequired,
@@ -81,13 +81,16 @@ Wrapper.propTypes = {
 };
 
 const Icons = ({ name, size, left, top, isAnimated, animation }) => {
-  const Container = isAnimated ? IconAnimatedContainer : IconContainer;
-  return (
-    <Wrapper left={left} top={top} animation={animation}>
-      <Container iconSize={sizes[`${size}`]} name={name} left={left} top={top}>
+  return isAnimated ? (
+    <IconAnimatedWrapper left={left} top={top} animation={animation}>
+      <IconAnimatedContainer iconSize={sizes[`${size}`]} name={name} left={left} top={top}>
         {ICONS[name] ? ICONS[name] : <IconGithub />}
-      </Container>
-    </Wrapper>
+      </IconAnimatedContainer>
+    </IconAnimatedWrapper>
+  ) : (
+    <IconContainer iconSize={sizes[`${size}`]}>
+      {ICONS[name] ? ICONS[name] : <IconGithub />}
+    </IconContainer>
   );
 };
 

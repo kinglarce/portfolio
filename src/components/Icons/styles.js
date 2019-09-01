@@ -33,9 +33,6 @@ const IconContainer = styled.div`
     width: ${props => props.iconSize};
     height: ${props => props.iconSize};
   }
-  span {
-    margin-left: 10px;
-  }
 `;
 
 export { IconAnimatedContainer, IconContainer };

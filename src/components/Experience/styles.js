@@ -66,18 +66,14 @@ const Tab = styled.button`
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smallish};
   color: ${props => (props.isActive ? colors.highlights : colors.links)};
-
   ${media.thone`
     ${mixins.flexCenter};
     text-align: center;
     border-left: 0;
     border-bottom: 2px solid ${colors.highlights};
     min-width: 100%;
-    div:first-child {
+    div {
       display: block;
-    }
-    div:last-child {
-      display: ${props => (props.isActive ? 'block' : 'none')};
     }
   `};
   &:hover,
