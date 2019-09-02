@@ -42,7 +42,7 @@ const theme = {
     links: darkScheme.importExport,
     hoverLinks: darkScheme.findHighlight,
     buttons: darkScheme.focusBorder,
-    hoverButtons: darkScheme.constName,
+    hoverButtons: darkScheme.require,
     hoverTextButtons: darkScheme.focusBorder,
     bodyText: darkScheme.focusBorder,
     footerText: darkScheme.focusBorder,

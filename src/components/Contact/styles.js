@@ -4,9 +4,9 @@ import { theme, mixins, media, Section } from '@styles';
 const { colors } = theme;
 
 const ContactContainer = styled(Section)`
-  text-align: left;
+  text-align: center;
   max-width: 600px;
-  margin: 0 0 100px;
+  margin: 0 auto 100px;
   a {
     ${mixins.inlineLink};
   }
@@ -20,4 +20,15 @@ const Title = styled.h4`
   color: ${colors.highlights};
 `;
 
-export { ContactContainer, Title };
+const ResumeLink = styled.a`
+  ${mixins.bigButton};
+  margin-top: 50px;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: none;
+    color: ${colors.hoverTextButtons};
+  }
+`;
+
+export { ContactContainer, Title, ResumeLink };

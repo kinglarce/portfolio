@@ -124,7 +124,7 @@ const mixins = {
     &:hover,
     &:focus,
     &:active {
-      background-color: ${colors.hoverButtons};
+      border: 1px solid ${colors.hoverLinks};
       color: ${colors.hoverTextButtons};
     }
     &:after {
