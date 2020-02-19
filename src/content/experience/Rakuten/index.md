@@ -24,11 +24,12 @@ techs:
   - Typescript
 ---
 
-- Collaborated with a diverse, multi-disciplinary team of engineers, designer and product managers
-  to build an in-house analytics tool which is now being used by all Rakuten services for their
+- Collaborated with a diverse, multi-disciplinary team of engineers, designers, and product managers
+  to build an in-house analytics tool that is now being used by all Rakuten services for their
   analytics.
-- Engineered and maintained major features as well as handles adhoc requests to fix client issue.
-- Write technical specification for new features that will be discussed on, how is it best for us to
-  move forward on the development of it.
-- Proposed and implemented scalable solutions to the existing tightly coupled monolith app by making
-  it detachable and decoupled from the persistence and business logic layer.
+- Led a team of four members where I perform requirements analysis, design, development and testing
+  on new features and legacy system improvements.
+- Mentored and guided team members ensuring all were trained in product knowledge and capable of
+  handling outages.
+- Acted as the contact point between technical team, project managers, tester and analytics
+  consultant.
