@@ -14,6 +14,7 @@ techs:
   - ELKStack
   - GraphQL
   - HapiJS
+  - NodeJS
   - Jenkins
   - Jest
   - MongoDB
@@ -24,12 +25,9 @@ techs:
   - Typescript
 ---
 
-- Collaborated with a diverse, multi-disciplinary team of engineers, designers, and product managers
-  to build an in-house analytics tool that is now being used by all Rakuten services for their
-  analytics.
-- Led a team of four members where I perform requirements analysis, design, development and testing
-  on new features and legacy system improvements.
+- Led the development and implementation of timezone, mobile event, and rule builder support
+  features which is now being used by all Rakuten services for their marketing decisions.
 - Mentored and guided team members ensuring all were trained in product knowledge and capable of
   handling outages.
-- Acted as the contact point between technical team, project managers, tester and analytics
-  consultant.
+- Currently spend 40% time working on analyzing business requirements with project managers and
+  technical specifications, 40% on feature development and outages, and 20% on team workloads.
