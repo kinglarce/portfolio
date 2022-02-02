@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: "Hi! I'm King Larce Cortes",
+  siteTitle: 'King Larce Cortes',
   siteDescription:
     'A software engineer currently based in Tokyo, Japan who specializes in translating ideas into business through code.',
   siteKeywords:
