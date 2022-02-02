@@ -1,7 +1,7 @@
 ---
 date: '3'
-title: 'Application Developer'
-date_range: 'Jan 2019 - Present'
+title: 'Senior Software Engineer'
+date_range: 'Jan 2019 - August 2021'
 company: 'Rakuten'
 location: 'Tokyo, Japan'
 url: 'https://global.rakuten.com/corp/'
@@ -23,11 +23,13 @@ techs:
   - Redux
   - Sass
   - Typescript
+  - Postgres
+  - Kubernetes
+  - AWS
+  - Terraform
 ---
 
 - Led the development and implementation of timezone, mobile event, and rule builder support
   features which is now being used by all Rakuten services for their marketing decisions.
-- Mentored and guided team members ensuring all were trained in product knowledge and capable of
-  handling outages.
-- Currently spend 40% time working on analyzing business requirements with project managers and
-  technical specifications, 40% on feature development and outages, and 20% on team workloads.
+- Mentored and guided team members ensuring all were trained in product knowledge.
+- Improved applications reliability, responding to issues and incidents, and automated toil tasks.

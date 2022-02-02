@@ -13,6 +13,8 @@ import { NormalLink, InlineLink } from '@styles/components/Link';
 import {
   Declaration,
   DeclarationBrackets,
+  DeclarationBracketLeft,
+  DeclarationBracketRight,
   DeclarationArrow,
   DeclarationJSX
 } from '@styles/components/Declaration';
@@ -33,6 +35,8 @@ export {
   InlineLink,
   Declaration,
   DeclarationBrackets,
+  DeclarationBracketLeft,
+  DeclarationBracketRight,
   DeclarationArrow,
   DeclarationJSX,
   UpDown,

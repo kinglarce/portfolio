@@ -16,6 +16,10 @@ skills:
   - Redux - 24 - 25% - 50%  - updownwide
   - Typescript - 32 - 5% - 50% - updown
   - NodeJS - 24 - 85% - 45% - updown
+  - Postgres - 32 - 95% - 70% - updownwide
+  - Kubernetes - 32 - 70% - 70% - updown
+  - AWS - 48 - 30% - 95%
+  - Terraform - 16 - 55% - 90%  - updownwide
 ---
 
 Hello! I'm King Larce, a software engineer based in Tokyo, Japan who's hungry for explorations and

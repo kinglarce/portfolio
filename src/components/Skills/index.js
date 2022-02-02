@@ -1,8 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Icons from '@components/Icons';
-import { NormalLink } from '@styles';
-import { SkillsContainer, SkillsList, SkillItem, SkillsMenu } from './styles';
+import { SkillsContainer, SkillsList, SkillItem, SkillsMenu, PlayLink } from './styles';
 
 const Skill = ({ skillDetail, play }) => {
   const [skill, size, left, top, animationCurrent] = skillDetail.split(' - ');
@@ -36,9 +35,9 @@ const Skills = ({ skills }) => {
   return (
     <SkillsContainer>
       <SkillsMenu>
-        <NormalLink onClick={togglePlay}>
+        <PlayLink onClick={togglePlay}>
           <Icons name={play ? 'Stop' : 'Play'} />
-        </NormalLink>
+        </PlayLink>
       </SkillsMenu>
       <SkillsList>
         {skills && skills.map(skill => <Skill key={skill} skillDetail={skill} play={play} />)}

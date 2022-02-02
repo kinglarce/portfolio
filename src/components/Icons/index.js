@@ -21,6 +21,10 @@ import IconRedux from '@static/svg/redux.svg';
 import IconSass from '@static/svg/sass.svg';
 import IconTypescript from '@static/svg/typescript.svg';
 import IconNodeJS from '@static/svg/nodejs.svg';
+import IconPostgres from '@static/svg/postgresql.svg';
+import IconKubernetes from '@static/svg/kubernetes.svg';
+import IconAWS from '@static/svg/amazon_aws.svg';
+import IconTerraform from '@static/svg/terraform.svg';
 
 import IconArvato from '@static/svg/arvato.svg';
 import IconNettrac from '@static/svg/nettrac.svg';
@@ -56,6 +60,10 @@ const ICONS = {
   Sass: <IconSass />,
   Typescript: <IconTypescript />,
   NodeJS: <IconNodeJS />,
+  Postgres: <IconPostgres />,
+  Kubernetes: <IconKubernetes />,
+  AWS: <IconAWS />,
+  Terraform: <IconTerraform />,
   Arvato: <IconArvato />,
   Nettrac: <IconNettrac />,
   Rakuten: <IconRakuten />,

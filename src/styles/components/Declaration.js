@@ -21,6 +21,28 @@ const DeclarationBrackets = styled.div`
   }
 `;
 
+const DeclarationBracketLeft = styled.div`
+  ${mixins.flexBetween};
+  font-family: ${fonts.SFMono};
+  font-weight: normal;
+  &:before {
+    margin-left: 10px;
+    content: ' ( ';
+    color: ${colors.highlights};
+  }
+`;
+
+const DeclarationBracketRight = styled.div`
+  ${mixins.flexBetween};
+  font-family: ${fonts.SFMono};
+  font-weight: normal;
+  &:after {
+    margin-right: 10px;
+    content: ' ) ';
+    color: ${colors.highlights};
+  }
+`;
+
 const DeclarationArrow = styled.div`
   font-family: ${fonts.SFMono};
   font-weight: normal;
@@ -71,4 +93,11 @@ const DeclarationJSX = styled.div`
   ${media.thone`margin-left: 0px;`};
 `;
 
-export { Declaration, DeclarationBrackets, DeclarationArrow, DeclarationJSX };
+export {
+  Declaration,
+  DeclarationBrackets,
+  DeclarationArrow,
+  DeclarationJSX,
+  DeclarationBracketLeft,
+  DeclarationBracketRight
+};

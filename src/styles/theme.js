@@ -12,7 +12,7 @@ const lightScheme = {
 
 const darkScheme = {
   // Dark Theme
-  background: '#212121',
+  background: '#0c1424',
   scrollbars: '#EEFFFF20',
   lineNumbers: '#424242',
   comments: '#545454',
